@@ -1,0 +1,3322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="keywords" content="河北省新华书店教育图书预订" />
+    <meta name="description" content="河北省新华书店教育图书预订" />
+    <title>河北省新华书店教育图书预订</title>
+    <link href="<{$env.app.res_url}>/css/new/css/swiper.min.css" type="text/css" rel="stylesheet" />
+    <link href="<{$env.app.res_url}>/css/new/css/tj.swiper.min.css" type="text/css" rel="stylesheet" />
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script>
+        // alert('33333');
+    </script>
+    <link target='main' href="<{$env.app.res_url}>/css/new/css/style.css" type="text/css" rel="stylesheet" />
+    <script src="<{$env.app.res_url}>/css/new/js/jquery.js"></script>
+    <script type="text/javascript">var jQuery=jQuery.noConflict()</script>
+    <script src="<{$env.app.res_url}>/css/new/js/jquery.cookie.js"></script>
+    <script src="<{$env.app.res_url}>/css/new/js/responsiveslides.min.js"></script>
+    <script src="<{$env.app.res_url}>/css/new/js/jquery.cookie.js"></script>
+    <script type=text/javascript charset=utf-8 src="<{$env.app.res_url}>/css/new/js/lrscroll.js"></script>
+
+    <script src="http://www.xinhuabest.com/public/app/site/lang/zh_CN/js/lang.js"></script>
+    <script src="http://www.xinhuabest.com/public/app/site/statics/js_mini/moo.min.js"></script>
+    <script src="http://www.xinhuabest.com/public/app/site/statics/js_mini/ui.min.js"></script>
+    <script src="http://www.xinhuabest.com/public/app/b2c/lang/zh_CN/js/lang.js"></script>
+    <script>
+        var Shop = {"url":{"shipping":"\/index.php\/cart-shipping.html","total":"\/index.php\/cart-total.html","region":"\/index.php\/tools-selRegion.html","payment":"\/index.php\/cart-payment.html","purchase_shipping":"\/index.php\/cart-purchase_shipping.html","purchase_def_addr":"\/index.php\/cart-purchase_def_addr.html","purchase_payment":"\/index.php\/cart-purchase_payment.html","get_default_info":"\/index.php\/cart-get_default_info.html","diff":"\/index.php\/product-diff.html","fav_url":"\/index.php\/member-ajax_fav.html","datepicker":"http:\/\/www.xinhuabest.com\/public\/app\/site\/statics\/js_mini","placeholder":"http:\/\/www.xinhuabest.com\/public\/app\/b2c\/statics\/images\/imglazyload.gif"},"base_url":"\/"};
+    </script>
+    <script src="http://www.xinhuabest.com/public/app/b2c/statics/js_mini/shop.min.js"></script>
+    <script src="http://www.xinhuabest.com/public/app/b2c/lang/zh_CN/js/ui.min.js"></script>
+    <style type="text/css">
+        #m_s_county::-webkit-input-placeholder { /* WebKit browsers */
+            color:    #fff;
+        }
+        #m_s_county:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #fff;
+        }
+        #m_s_county::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #fff;
+        }
+        #m_s_county:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:    #fff;
+        }
+        #s_county::-webkit-input-placeholder { /* WebKit browsers */
+            color:    #000;
+        }
+        #s_county:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #000;
+        }
+        #s_county::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #000;
+        }
+        #s_county:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:    #000;
+        }
+
+            /*class*/
+        #m_s_class::-webkit-input-placeholder { /* WebKit browsers */
+            color:    #fff;
+        }
+        #m_s_class:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #fff;
+        }
+        #m_s_class::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #fff;
+        }
+        #m_s_class:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:    #fff;
+        }
+        #s_class::-webkit-input-placeholder { /* WebKit browsers */
+            color:    #000;
+        }
+        #s_class:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #000;
+        }
+        #s_class::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #000;
+        }
+        #s_class:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:    #000;
+        }
+
+    </style>
+</head>
+
+<body class="grade_body">
+<script>
+    var url=window.location.href;
+    var reg=/&/g;
+    url=url.replace(reg,'%26');
+    //alert(url);
+    jQuery.ajax({
+        type : "get",
+        url : "http://www.xinhuabest.com/jssdk.php?url="+url,//替换网址，xxx根据自己jssdk文件位置修改
+        dataType : "jsonp",
+        jsonp: "callback",
+        jsonpCallback:"success_jsonpCallback",
+        success : function(data){
+            //alert(data);
+            // alert(data.url);
+            wx.config({
+                debug: false,
+                appId: data.appId,
+                timestamp: data.timestamp,
+                nonceStr: data.nonceStr,
+                signature: data.signature,
+                jsApiList: [
+                    "onMenuShareTimeline", //分享给好友
+                    "onMenuShareAppMessage", //分享到朋友圈
+                    "onMenuShareQQ", //分享到QQ
+                    "onMenuShareWeibo" //分享到微博
+                ]
+            });
+        },
+
+    });
+
+
+    wx.ready(function (){
+        var url2=window.location.href;
+        var shareData = {
+            title: '河北省新华书店教育图书预订',
+            desc: '您好，欢迎来到河北省新华书店教育图书预订中心！',//这里请特别注意是要去除html
+            link: url2,
+            imgUrl: 'http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/fx.jpg'
+        };
+        wx.onMenuShareAppMessage(shareData);
+        wx.onMenuShareTimeline(shareData);
+        wx.onMenuShareQQ(shareData);
+        wx.onMenuShareWeibo(shareData);
+    });
+    //var url=location.href;
+    // jQuery.get("http://www.xinhuabest.com/jssdk.php?url="+url, function(data){
+    //	 alert(data);
+    //	 alert(data.appId);
+    //     wx.config({
+    //	debug: true,
+    //	appId: data.appId,
+    //	timestamp: data.timestamp,
+    //	nonceStr: data.nonceStr,
+    //	signature: data.signature,
+    //	jsApiList: [
+    //	  "onMenuShareTimeline", //分享给好友
+    //	  "onMenuShareAppMessage", //分享到朋友圈
+    //	  "onMenuShareQQ", //分享到QQ
+    //	  "onMenuShareWeibo" //分享到微博
+    //	]
+    //	});
+    // });
+</script>
+<!--顶部-->
+<div class="top">
+    <div class="topl">
+        <a class="house"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/house.png"></a>
+        <div class="topl_logo"><a href='/jiaofu.html'><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/logo.png" /></a></div>
+        <div class="topl_text">您好，欢迎来到河北省新华书店教育图书预订中心！</div>
+    </div>
+    <div class="topr" style=' width: 750px;'>
+        <a class="houses"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/house.png"></a>
+        <div class="topr_tel" style='margin-left: 175px;'><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/tel.png" /></div>
+    </div>
+</div>
+<!--m_top-->
+<div style="width:100%;height:45px;background-color:#b70008;" id="mobile_elsenav">
+    <img style="float:left;margin-left:3%;margin-top:3.5%;" src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/house.png"/>
+    <img style="float:left;  margin-left: 10px;margin-top:3.5%;width: 76px;" src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/logo.png"/>
+    <div class="chongxuan" style="float:right;margin-right:2%; line-height:47px">更换区域</div>
+    <!--<img class="chongxuan" style="float:right;margin-right:1%;margin-top:2px;width:20px;height:20px;" src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/genghuan.png"/>-->
+</div>
+<div class="m_top"></div>
+
+<script>
+    jQuery(".address_nr ul li").click(function(){
+        var li_text = jQuery(this).text();
+        jQuery(".dz").html(li_text);
+        jQuery(".address_nr ul").slideUp();
+    })
+    jQuery(".zs,.dz").click(function(){
+        jQuery(".address_nr ul").slideToggle();
+    })
+    jQuery(".zs,.dz").click(function(){
+        jQuery(".address").css("border","#fff 1px solid");
+    })
+    jQuery(".address_nr ul").click(function(){
+        jQuery(".address").css("border","#b70008 1px solid");
+    })
+</script>
+<div class="beijing">
+<!--查找-->
+<div class="index_main">
+<div class="title"><img src="<{$env.app.res_url}>/css/new/images/title.png" /></div>
+
+<!---0323--->
+<div class="position_else">
+    <div class="position_name">已选：</div>
+    <div class="posi_location" id="dqwz"></div>
+    <a class="ghqy_new">更换区域</a>
+</div>
+
+<!--查找按钮-->
+<div class="seek">
+    <div class="look_for">
+        <ul>
+            <li class="active"><a href="http://www.xinhuabest.com/index.php/gallery-index_new-94.html">按照年级查找<span><img src="<{$env.app.res_url}>/css/new/images/tuijian.png" /></span></a></li>
+
+            <li><a  href="http://www.xinhuabest.com/index.php/gallery-index_cbs-94.html?scontent=22">按出版社查找</a></li>
+
+        </ul>
+    </div>
+</div>
+<!--切换内容-->
+<div class="change">
+
+<!-----------年级--------------------->
+<div class="changes">
+    <!--pc 年级-->
+    <div class="grade_seek">
+        <div class="grade_seeks">
+            <div class="grade1"><!--<{$cat_name}><{$ce}>-->
+                <div class="grade_tit">选择年级<{$ce}></div>
+                <div class="grade_nr">
+                    <ul>
+                        <{if $ce eq '下'}>
+                        <li <{if $cat_name eq '一年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-96.html?scontent=<{$scontent}>'>一年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '二年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-98.html?scontent=<{$scontent}>'>二年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '三年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-100.html?scontent=<{$scontent}>'>三年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '四年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-102.html?scontent=<{$scontent}>'>四年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '五年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-104.html?scontent=<{$scontent}>'>五年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '六年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-106.html?scontent=<{$scontent}>'>六年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '七年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-108.html?scontent=<{$scontent}>'>七年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '八年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-110.html?scontent=<{$scontent}>'>八年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '九年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-112.html?scontent=<{$scontent}>'>九年级</a></li>
+                        <{else}>
+                        <li <{if $cat_name eq '一年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-95.html?scontent=<{$scontent}>'>一年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '二年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-97.html?scontent=<{$scontent}>'>二年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '三年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-99.html?scontent=<{$scontent}>'>三年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '四年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-101.html?scontent=<{$scontent}>'>四年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '五年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-103.html?scontent=<{$scontent}>'>五年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '六年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-105.html?scontent=<{$scontent}>'>六年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '七年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-107.html?scontent=<{$scontent}>'>七年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '八年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-109.html?scontent=<{$scontent}>'>八年级</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '九年级'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-111.html?scontent=<{$scontent}>'>九年级</a></li>
+                        <{/if}>
+                        <li <{if $cat_name eq '高中选'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-113.html?scontent=<{$scontent}>'>高中选修</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '高中必'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-114.html?scontent=<{$scontent}>'>高中必修</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '中考专'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-115.html?scontent=<{$scontent}>'>中考专区</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '高考专'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-116.html?scontent=<{$scontent}>'>高考专区</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '大一'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-159.html?scontent=<{$scontent}>'>大一</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '大二'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-160.html?scontent=<{$scontent}>'>大二</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '大三'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-161.html?scontent=<{$scontent}>'>大三</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $cat_name eq '大四'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-162.html?scontent=<{$scontent}>'>大四</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grade1">
+                <div class="grade_tit">选择学科</div>
+                <div class="grade_nr">
+                    <ul>
+                        <li <{if $xueke eq ''}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent='>全部</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '语文'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,语文'>语文</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '数学'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,数学'>数学</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '英语'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,英语'>英语</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '音乐'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,音乐'>音乐</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '美术'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,美术'>美术</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '品德与生活'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,品德与生活'>品德与生活</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '科学自然'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,科学自然'>科学自然</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '信息'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,信息'>信息</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '历史'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,历史'>历史</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '政治'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,政治'>政治</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '地理'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,地理'>地理</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '生物'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,生物'>生物</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '物理'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,物理'>物理</a></li>
+                        <li><span>|</span></li>
+                        <li <{if $xueke eq '化学'}> class="active" <{/if}>><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,化学'>化学</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grade1">
+                <div class="grade_tit">选择册书</div>
+                <div class="grade_nr">
+                    <ul>
+                        <{if $ce eq '上'}>
+                        <li  class="active"><a>上册</a></li><li><span>|</span></li>
+                        <{else}>
+                        <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$shang}>.html?scontent=<{$scontent}>'>上册</a></li><li><span>|</span></li>
+                        <{/if}>
+                        <{if $ce eq '下'}>
+                        <li  class="active"><a>下册</a></li>
+                        <{else}>
+                        <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$xia}>.html?scontent=<{$scontent}>'>下册</a></li><li><span>|</span></li>
+                        <{/if}>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .icon-filter-arrow {width: 8px;height: 6px; background: url(../images/icon_arrow_down_x2.png) right no-repeat; background-size: 100%; right: 10px; top: 13px; margin:0; transition: all .2s;}
+
+
+    </style>
+
+    <!--mobile 年级-->
+    <div class="m_grade_seek">
+
+        <div class="choose_name2"><!--<{$cat_name}><{$ce}>-->
+            <div class="choose_dz2" id="mnbc1"><{if $cat_id==94}>选择年级<{else}><{$cat_name}><{/if}><{if $cat_name eq '高中选'}>修<{/if}><{if $cat_name eq '高中必'}>修<{/if}><{if $cat_name eq '中考专'}>区<{/if}><{if $cat_name eq '高考专'}>区<{/if}></div>
+            <span class="choose_zs2" id="mnbc11"></span>
+            <ul class="choose_nr2" id="nnbc1">
+                <{if $ce eq '下'}>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-96.html?scontent=<{$scontent}>'>一年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-98.html?scontent=<{$scontent}>'>二年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-100.html?scontent=<{$scontent}>'>三年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-102.html?scontent=<{$scontent}>'>四年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-104.html?scontent=<{$scontent}>'>五年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-106.html?scontent=<{$scontent}>'>六年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-108.html?scontent=<{$scontent}>'>七年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-110.html?scontent=<{$scontent}>'>八年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-112.html?scontent=<{$scontent}>'>九年级</a></li>
+                <{else}>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-95.html?scontent=<{$scontent}>'>一年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-97.html?scontent=<{$scontent}>'>二年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-99.html?scontent=<{$scontent}>'>三年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-101.html?scontent=<{$scontent}>'>四年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-103.html?scontent=<{$scontent}>'>五年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-105.html?scontent=<{$scontent}>'>六年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-107.html?scontent=<{$scontent}>'>七年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-109.html?scontent=<{$scontent}>'>八年级</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-111.html?scontent=<{$scontent}>'>九年级</a></li>
+                <{/if}>
+                <li <{if $cat_name eq '高中选'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-113.html?scontent=<{$scontent}>'>高中选修</a></li>
+                <li <{if $cat_name eq '高中必'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-114.html?scontent=<{$scontent}>'>高中必修</a></li>
+                <li <{if $cat_name eq '中考专'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-115.html?scontent=<{$scontent}>'>中考专区</a></li>
+                <li <{if $cat_name eq '高考专'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-116.html?scontent=<{$scontent}>'>高考专区</a></li>
+                <li <{if $cat_name eq '大一'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-159.html?scontent=<{$scontent}>'>大一</a></li>
+                <li <{if $cat_name eq '大二'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-160.html?scontent=<{$scontent}>'>大二</a></li>
+                <li <{if $cat_name eq '大三'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-161.html?scontent=<{$scontent}>'>大三</a></li>
+                <li <{if $cat_name eq '大四'}> class="active" <{/if}>><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-162.html?scontent=<{$scontent}>'>大四</a></li>
+            </ul>
+        </div>
+        <div class="choose_name2">
+            <div class="choose_dz2" id="mnbc2"><{if empty($xueke)}>选择学科<{else}><{$xueke}><{/if}></div>
+            <span class="choose_zs2" id="mnbc22"></span>
+            <ul class="choose_nr2" id="nnbc2">
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent='>全部</a></li>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,语文'>语文</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,数学'>数学</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,英语'>英语</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,音乐'>音乐</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,美术'>美术</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,品德与生活'>品德与生活</a><li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,科学自然'>科学自然</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,信息'>信息</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,历史'>历史</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,政治'>政治</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,地理'>地理</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,生物'>生物</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,物理'>物理</a></li>
+                <li><a  target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$cat_id}>.html?scontent=21,化学'>化学</a></li>
+            </ul>
+        </div>
+        <div class="choose_name2">
+            <div class="choose_dz2" id="mnbc3"><{if empty($ce)}>选择册<{else}><{$ce}>册<{/if}></div>
+            <span class="choose_zs2" id="mnbc33"></span>
+            <ul class="choose_nr2" id="nnbc3">
+                <{if $ce eq '上'}>
+                <li  class="active"><a>上册</a></li>
+                <{else}>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$shang}>.html?scontent=<{$scontent}>'>上册</a></li>
+                <{/if}>
+                <{if $ce eq '下'}>
+                <li  class="active"><a>下册</a></li>
+                <{else}>
+                <li><a target='main' href='http://www.xinhuabest.com/index.php/gallery-index_new-<{$xia}>.html?scontent=<{$scontent}>'>下册</a></li>
+                <{/if}>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+<!--0323-->
+<div class="m_position_else"><!--手机端已选-->
+    <div class="position_name">已选：</div>
+    <div class="posi_location" id="dqwz2"></div>
+</div>
+
+<!------------按城市查找------------>
+
+
+<!--联动js-->
+<script>
+    jQuery(".choose_name2 ul li").click(function(){
+        var li_text = jQuery(this).text();
+        jQuery(this).parent(".choose_nr2").siblings(".choose_zs2").html(li_text);
+        jQuery(this).parent(".choose_nr2").slideUp();
+        jQuery(this).parent(".choose_nr2").siblings(".choose_dz2").css({display:"none"});
+        jQuery(this).parent(".choose_nr2").siblings(".choose_zs2").css({textAlign:"left",lineHeight:"40px",color:"#6c6c6c"});
+    })
+    // jQuery(".choose_dz2,.choose_zs2").click(function(){
+    //alert('aaaa');
+    // jQuery(this).siblings(".choose_nr2").slideToggle();
+    //})
+    jQuery("#mnbc1,#mnbc11").click(function(){
+        //alert('aaaa');
+        jQuery("#nnbc2").hide();
+        jQuery("#nnbc3").hide();
+        jQuery(this).siblings("#nnbc1").slideToggle();
+        // jQuery(this).siblings(".choose_nr2").slideToggle();
+    })
+    jQuery("#mnbc2,#mnbc22").click(function(){
+        //alert('aaaa');
+        jQuery("#nnbc1").hide();
+        jQuery("#nnbc3").hide();
+        jQuery(this).siblings("#nnbc2").slideToggle();
+        // jQuery(this).siblings(".choose_nr2").slideToggle();
+    })
+    jQuery("#mnbc3,#mnbc33").click(function(){
+        //alert('aaaa');
+        jQuery("#nnbc2").hide();
+        jQuery("#nnbc1").hide();
+        jQuery(this).siblings("#nnbc3").slideToggle();
+        // jQuery(this).siblings(".choose_nr2").slideToggle();
+    })
+
+
+
+
+    function search_school(){
+        var school=jQuery('#school').val();
+        window.location.href='http://www.xinhuabest.com/index.php/gallery-index_new-9.html?scontent=27,'+school;
+    }
+    function querendiqu(i){
+        if(i==1){  /*1是mobile*/
+            var s_province=jQuery('#m_s_province').val();
+            var s_city=jQuery('#m_s_city').val();
+            var s_county=jQuery('#m_s_county').val();
+            var s_grade=jQuery('#m_s_grade').val();
+            var s_class=jQuery('#m_s_class').val();
+            var date=new Date;
+            var month=date.getMonth()+1;
+            jQuery('.tanc').hide();
+            // if(month>6){
+            //alert(s_grade);
+            if(s_grade=='一年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-95.html?scontent=<{$scontent}>';
+            }else if(s_grade=='二年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-97.html?scontent=<{$scontent}>';
+            }else if(s_grade=='三年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-99.html?scontent=<{$scontent}>';
+            }else if(s_grade=='四年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-101.html?scontent=<{$scontent}>';
+            }else if(s_grade=='五年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-103.html?scontent=<{$scontent}>';
+            }else if(s_grade=='六年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-105.html?scontent=<{$scontent}>';
+            }else if(s_grade=='七年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-107.html?scontent=<{$scontent}>';
+            }else if(s_grade=='八年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-109.html?scontent=<{$scontent}>';
+            }else if(s_grade=='九年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-111.html?scontent=<{$scontent}>';
+            }else if(s_grade=='大一'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-159.html?scontent=<{$scontent}>';
+            }else if(s_grade=='大二'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-160.html?scontent=<{$scontent}>';
+            }else if(s_grade=='大三'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-161.html?scontent=<{$scontent}>';
+            }else if(s_grade=='大四'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-162.html?scontent=<{$scontent}>';
+            }
+
+            // }else{
+//                //alert(456);
+//                if(s_grade=='一年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-96.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='二年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-98.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='三年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-100.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='四年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-102.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='五年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-104.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='六年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-106.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='七年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-108.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='八年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-110.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='九年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-112.html?scontent=<{$scontent}>';
+//                }
+//            }
+
+            if(s_province=='选择地市'||s_city=='选择区县'||s_county=='填写学校'||s_grade=='选择年级'||s_class=='选择班级'){
+                alert('请选择您的班级');
+            }else{
+                jQuery.cookie('s_province', s_province);
+                jQuery.cookie('s_city', s_city);
+                jQuery.cookie('s_county', s_county);
+                jQuery.cookie('s_grade', s_grade);
+                jQuery.cookie('s_class', s_class);
+                //jQuery.cookie('beizhu', s_province+','+s_city+','+s_county+','+s_grade+','+s_class);
+                jQuery.cookie('beizhu', s_province+','+s_city+',-,'+s_county);
+                jQuery(".m_tanc").fadeOut();
+                return 0;
+            }
+        }else{/*0是pc*/
+            var s_province=jQuery('#s_province').val();
+            var s_city=jQuery('#s_city').val();
+            var s_county=jQuery('#s_county').val();
+            var s_grade=jQuery('#s_grade').val();
+            var s_class=jQuery('#s_class').val();
+            var date=new Date;
+            var month=date.getMonth()+1;
+            jQuery('.m_tanc').hide();
+
+            //if(month>6){
+            if(s_grade=='一年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-95.html?scontent=<{$scontent}>';
+            }else if(s_grade=='二年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-97.html?scontent=<{$scontent}>';
+            }else if(s_grade=='三年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-99.html?scontent=<{$scontent}>';
+            }else if(s_grade=='四年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-101.html?scontent=<{$scontent}>';
+            }else if(s_grade=='五年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-103.html?scontent=<{$scontent}>';
+            }else if(s_grade=='六年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-105.html?scontent=<{$scontent}>';
+            }else if(s_grade=='七年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-107.html?scontent=<{$scontent}>';
+            }else if(s_grade=='八年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-109.html?scontent=<{$scontent}>';
+            }else if(s_grade=='九年级'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-111.html?scontent=<{$scontent}>';
+            }else if(s_grade=='大一'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-159.html?scontent=<{$scontent}>';
+            }else if(s_grade=='大二'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-160.html?scontent=<{$scontent}>';
+            }else if(s_grade=='大三'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-161.html?scontent=<{$scontent}>';
+            }else if(s_grade=='大四'){
+                window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-162.html?scontent=<{$scontent}>';
+            }
+
+            // }else{
+//                if(s_grade=='一年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-96.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='二年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-98.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='三年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-100.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='四年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-102.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='五年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-104.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='六年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-106.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='七年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-108.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='八年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-110.html?scontent=<{$scontent}>';
+//                }else if(s_grade=='九年级'){
+//                    window.location.href = 'http://www.xinhuabest.com/index.php/gallery-index_new-112.html?scontent=<{$scontent}>';
+//                }
+//            }
+            if(s_province=='选择地市'||s_city=='选择区县'||s_county=='填写学校'||s_grade=='选择年级'||s_class=='选择班级'){
+                alert('请选择您的班级');
+            }else{
+                jQuery.cookie('s_province', s_province);
+                jQuery.cookie('s_city', s_city);
+                jQuery.cookie('s_county', s_county);
+                jQuery.cookie('s_grade', s_grade);
+                jQuery.cookie('s_class', s_class);
+                // jQuery.cookie('beizhu', s_province+','+s_city+','+s_county+','+s_grade+','+s_class);
+                jQuery.cookie('beizhu', s_province+','+s_city+',-,'+s_county);
+                jQuery(".tanc").fadeOut();
+                return 0;
+            }
+        }
+
+
+    }
+</script>
+<!--切换js-->
+<script>
+    jQuery(window).load(function(){
+        jQuery( function ()
+        {
+            jQuery(".pub_button li").each(function(i){
+                jQuery(this).click(function(){
+
+
+                    jQuery(this).addClass("current");
+                    jQuery(this).siblings().removeClass("current");
+                    jQuery(".pubs").css("display","none");
+                    jQuery(".pubs").eq(i).css("display","block");
+                })
+            })
+        });
+    })
+</script>
+
+</div>
+<!------------切换结束-------------------->
+</div>
+<!--change js-->
+<script>
+    jQuery(".grade_nr li").click(function(){
+
+        jQuery(this).addClass("active").siblings().removeClass("active");
+
+    });
+
+</script>
+<{if $ismoren == 1}>
+<div class="recom">
+    <div class="recom_bt">
+        <h3>热门图书推荐</h3><span>/ Recommended Books</span>
+    </div>
+    <div class="recom_main">
+        <div id=feature>
+            <div id=block>
+                <div id=botton-scroll>
+                    <ul>
+                        <li class="lb_first"><img src="<{$env.app.res_url}>/css/new/images/img1.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img2.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img3.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img4.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img5.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img4.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img5.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img3.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img4.png" ></li>
+                        <li><img src="<{$env.app.res_url}>/css/new/images/img5.png" ></li>
+                    </ul>
+                </div>
+            </div>
+            <a class=prev target='main' href="javascript:void();">Previous</a>
+            <a class=next target='main' href="javascript:void();">Next</a> </div>
+    </div>
+</div>
+
+
+
+
+
+</div></div>
+<{else}>
+<!-----------年级内容------------->
+
+<!---新添加的六本指定图书begin-->
+<div class="grade_main gallery-sortbar" style="display: none;">
+<div class="grade_mains  gallery-show">
+<div class="gallery-list">
+<input type="hidden" class="action-pagedata" value="{total:<{$total}>, pagecurrent:<{$page|default:1}>, pagetotal:<{$pagetotal}>}">
+<!--20180803 edit by zhang 如果想改回来，直接删掉下边的<ul></ul>即可-->
+<ul>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html"><img class="action-goods-img" alt="五年中考三年模拟 初中英语 七年级上册 人教版 2019版初中同步" src="http://www.xinhuabest.com/public/images/01/9c/be/5d544af81eb8cb555bd93fb3cf91d215991cdf19.jpg?1533518934#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+             <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+            </span>
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html"><span><span >立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥29.90</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥29.90</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥29.90</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html">五年中考三年模拟 初中英语 七年级上册 人教版 2019版初中同步</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html"><img class="action-goods-img" alt="星星离我们有多远" src="http://www.xinhuabest.com/public/images/4a/af/2b/108e8c53cd059512481043ed05fc9285f66bc3c7.jpg?1533690729#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥32.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥32.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥32.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html">星星离我们有多远</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html"><img class="action-goods-img" alt="城南旧事 七年级上" src="http://www.xinhuabest.com/public/images/37/ce/b5/86e1eaa55b611e5f93cbe33fe05f9fe15ade96bf.jpg?1533691038#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥24.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥24.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥24.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html">城南旧事 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html"><img class="action-goods-img" alt="学生字典（单色插图本)" src="http://www.xinhuabest.com/public/images/7f/fb/a7/f16faded6508e413f58b10a18586393fcf40e39f.jpg?1501641546#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥16.73</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥16.73</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥16.73</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html">学生字典（单色插图本)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html"><img class="action-goods-img" alt="新华字典(第11版大字本)" src="http://www.xinhuabest.com/public/images/b1/2f/1b/bce1ff4e42fe6effa9388bcc34ea66b9737a7751.jpg?1474956924#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥42.72</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥42.72</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥42.72</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html">新华字典(第11版大字本)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html"><img class="action-goods-img" alt="湘行散记 七年级上" src="http://www.xinhuabest.com/public/images/45/17/26/2a5966dc77304e7bd9425f4e9f9d9020ef2acfeb.jpg?1533691359#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥22.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥22.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥22.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html">湘行散记 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html"><img class="action-goods-img" alt="现代汉语字典（彩色插图本）" src="http://www.xinhuabest.com/public/images/4d/1b/92/3527d5625a878804715ab03b195d6cc75ac8fad1.jpg?1533692625#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥78.32</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥78.32</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥78.32</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html">现代汉语字典（彩色插图本）</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html"><img class="action-goods-img" alt="朝花夕拾 七年级上" src="http://www.xinhuabest.com/public/images/4e/8c/64/2ab2a743167bf6fd77b87e8ff4734550428c9a2e.jpg?1533691653#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥22.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥22.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥22.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html">朝花夕拾 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html"><img class="action-goods-img" alt="现代汉语词典(第6版)(精)" src="http://www.xinhuabest.com/public/images/fd/78/06/055ae5deefbc8bc76552e08eefdc5da0a49559e1.jpg?1456399247#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥84.55</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥84.55</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥84.55</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html">现代汉语词典(第6版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html"><img class="action-goods-img" alt="小学生多功能组词造句搭配词典(新课标学生专用辞书彩图版)(精)" src="http://www.xinhuabest.com/public/images/01/f3/90/31e8ef97f3a4982bc60b4d3e03f8311a1854f6a2.jpg?1474622857#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥26.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥26.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥26.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html">小学生多功能组词造句搭配词典(新课标学生专用辞书彩图版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html"><img class="action-goods-img" alt="昆虫记 八年级上" src="http://www.xinhuabest.com/public/images/b9/f9/4e/f82d91006486efdbc152eea95eb62adf41c0934a.jpg?1533690068#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥34.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥34.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥34.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html">昆虫记 八年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html"><img class="action-goods-img" alt="现代汉语词典(第7版)(精)" src="http://www.xinhuabest.com/public/images/e8/0c/0e/9e7495a8bf32e29f2293f10c5f194bd1f33fcf9c.jpg?1533693113#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥109.00</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥109.00</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥109.00</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html">现代汉语词典(第7版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html"><img class="action-goods-img" alt="寂静的春天 八年级上" src="http://www.xinhuabest.com/public/images/9d/78/a5/e88f79f0d50a8e9053adf0ad036bd37cb4dbbc94.jpg?1533689712#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥29.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥29.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥29.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html">寂静的春天 八年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html"><img class="action-goods-img" alt="猎人笔记 七年级上" src="http://www.xinhuabest.com/public/images/ba/50/93/835718d9be72ff3618fe5046d1ba0fc71c1bcb44.jpg?1533629508#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥38.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥38.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥38.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html">猎人笔记 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html"><img class="action-goods-img" alt="汉语成语大词典(修订版)(精)" src="http://www.xinhuabest.com/public/images/02/4d/04/0755b25e1819f147c161b53f9373d1f4cd22ead6.jpg?1533693423#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥55.00</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥55.00</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥55.00</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html">汉语成语大词典(修订版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html"><img class="action-goods-img" alt="西游记（上下册）七年级上" src="http://www.xinhuabest.com/public/images/5e/f2/bb/daefd5b5d61e2df6872a382ee74532bd2bce954f.jpg?1533629121#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥65.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥65.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥65.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html">西游记（上下册）七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html"><img class="action-goods-img" alt="镜花缘 七年级上" src="http://www.xinhuabest.com/public/images/15/a8/15/f94d2b1d626e1366dc2882ed9ec0597e12ac845b.jpg?1533628579#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥58.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥58.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥58.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html">镜花缘 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix"  style="display: none;">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html"><img class="action-goods-img" alt="海底两万里 七年级下" src="http://www.xinhuabest.com/public/images/80/a1/7d/6d9dbe580a901c902956b498f13d321f4f9b2d25.jpg?1533628209#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥38.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥38.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥38.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html">海底两万里 七年级下</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html"><img class="action-goods-img" alt="小学生多功能同义词近义词反义词词典(新课标学生专用辞书彩图)" src="http://www.xinhuabest.com/public/images/dd/cd/02/000094147d95cf77d202d5d78a9f05433118b9e6.jpg?1474622582#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥26.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥26.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥26.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html">小学生多功能同义词近义词反义词词典(新课标学生专用辞书彩图)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html"><img class="action-goods-img" alt="骆驼祥子 七年级下" src="http://www.xinhuabest.com/public/images/f1/07/67/d6753dc8ae13b590a9cab78531a0789aded3a87b.jpg?1533627663#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥28.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥28.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥28.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html">骆驼祥子 七年级下</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html"><img class="action-goods-img" alt="成语大词典(单色本最新修订版)(精)" src="http://www.xinhuabest.com/public/images/34/e4/9e/8299766884b898179e83cbf37655865cc8f03378.jpg?1470906272#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥60.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥60.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥60.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html">成语大词典(单色本最新修订版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+
+</ul>
+</div>
+</div>
+</div>
+
+<!---新添加的六本指定图书end-->
+
+
+<div class="grade_main gallery-sortbar" id='gallery_sortbar' style="display:none">
+<div class="grade_mains  gallery-show" id='gallery_show'>
+    <div class="gallery-list">
+        <input type="hidden" class="action-pagedata" value="{total:<{$total}>, pagecurrent:<{$page|default:1}>, pagetotal:<{$pagetotal}>}">
+        <{if empty($goodsData)}>
+        <ul>
+            <li style="width:100%; padding-bottom: 1%!important;">
+                <h1 style="font-size:18px; color: #666;text-align:center;margin:0 auto;display: none;" >非常抱歉，没有找到相关教辅</h1> <!---->
+            </li>
+        </ul>
+        <{else}>
+        <ul>
+            <{foreach from=$goodsData key=key item=goods}>
+            <li class="goods-item clearfix">
+                <div class="goods-pic">
+                    <{if $goods.products.promotion_type_name }>
+                    <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
+                    <{else}>
+                    <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
+                    <{/if}>
+                    <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
+                    <{foreach from=$goods.tags item=tags}>
+                    <{if $tags.params.tag_showOnIndex == 'on'}>
+                    <{if $tags.params.tag_image}>
+                    <span class="img-tag-<{$tags.params.pic_loc}>" style="opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><img src="<{$tags.params.tag_image|storager}>"></span>
+                    <{else}>
+                    <{/if}>
+                    <{/if}>
+                    <{/foreach}>
+                    <{/if}>
+                </div>
+                <div class="goods-action">
+                    <!--预售商品的显示判断-->
+                    <{if !isset($goods.prepare)}>
+                    <div class="goods-buy">
+                        <{if $goods.products.store > 0}>
+                        <!-- 加入购物车 -->
+                        <{if $env.conf.b2c.gallery.display.buynum == 'true'}>
+          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+            <{if $env.conf.b2c.gallery.display.store_status == 'true'}>
+            <{if $goods.products.store <= $env.conf.b2c.gallery.store_status.num}>
+            <span class="store-warn"><{t}>库存紧张<{/t}></span>
+            <{/if}>
+            <{/if}>
+          </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+            <{if $env.conf.b2c.gallery.display.store_status == 'true'}>
+            <{if $goods.products.store <= $env.conf.b2c.gallery.store_status.num}>
+            <span class="store-warn"><{t}>库存紧张<{/t}></span>
+            <{/if}>
+            <{/if}>
+          </span>
+
+                        <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
+                        <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
+                        <{/if}>
+                        <{if $env.conf.b2c.site.buy.target == '2'}>
+                        <{assign var='buytarget' value='_blank_cart'}>
+                        <{elseif $env.conf.b2c.site.buy.target == '3'}>
+                        <{assign var='buytarget' value='_dialog_minicart'}>
+                        <{/if}>
+
+                        <a class="btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                        <{if $buytarget}> target="<{$buytarget}>"<{/if}>><span><span onclick="buy()">加入购物车</span></span>
+                        </a>
+                        <!--<a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                        <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
+                        </a>-->
+                        <{elseif $goods.spec_desc && $goods.store}>
+                        <a class="btn btn-caution" href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>查看详情</span></span></a>
+                        <{else}>
+                        <!-- 到货通知 -->
+                        <a href="javascript:void(0);" class="btn btn-caution action-notify" rel="<{$goods.goods_id}>::<{$goods.products.product_id}>"><span><span>到货通知</span></span></a>
+                        <{/if}>
+                    </div>
+                    <{else}>
+                    <!--预售商品-->
+                    <div class="goods-buy">
+
+                        <!-- 加入购物车 -->
+          <span class="p-quantity">
+            <input type="text" min="1" readonly="true" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
+
+          </span>
+                        <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
+                        <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
+
+
+                        <a class="btn btn-major"  href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>立即预定</span></span></a>
+
+                    </div>
+                    <{/if}>
+
+                    <div class="goods-others">
+                        <{if $login=='nologin'}>
+                        <a href="<{link app=b2c ctl=site_passport act=login}>" class="btn btn-simple"><span><span>收藏</span></span></a>
+                        <{else}>
+                        <{if !$goods.is_fav}>
+                        <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>"><span><span>收藏</span></span></button>
+                        <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+                        <{else}>
+                        <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>" style="display:none;"><span><span>收藏</span></span></button>
+                        <button type="button" class="btn btn-plane" rev="_favbtn_"><span><span>已收藏</span></span></button>
+                        <{/if}>
+                        <{/if}>
+                        <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"<{$goods.type_id}>",goods_id:"<{$goods.goods_id}>",img:"<{$goods.image_default_id|storager:'s'}>",name:"<{$goods.name|strip_tags}>",price:"<{$goods.products.price|cur_odr}>"}'><span><span>对比</span></span></button>
+                    </div>
+                </div>
+                <div class="goods-price">
+                    <ul>
+
+                        <li><label for="">销售价：</label><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
+                        <{if $env.conf.b2c.site.show_mark_price == 'true'}>
+                        <li><label for="">市场价：</label><del class="price"><{$goods.products.mktprice|cur_odr}></del></li>
+                        <{if $env.conf.b2c.site.save_price == '1'}>
+                        <li><label for="">节省：</label><span><{$goods.products.mktprice-$goods.products.price|cur_odr}></span></li>
+                        <{elseif $env.conf.b2c.site.save_price == '2'}>
+                        <li><label for="">优惠：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'2'}>%</span></li>
+                        <{elseif $env.conf.b2c.site.save_price == '3'}>
+                        <li><label for="">折扣：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'1'}><{t}>折<{/t}></span></li>
+                        <{/if}>
+                        <{/if}>
+                    </ul>
+                </div>
+
+                <div class="m_goods-price">
+                    <ul>
+
+                        <li><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
+                        <{if $env.conf.b2c.site.show_mark_price == 'true'}>
+                        <{/if}>
+                    </ul>
+                </div>
+
+
+                <div class="goods-info">
+                    <!--预售商品的显示判断-->
+                    <{if !isset($goods.prepare)}>
+                    <{if $goods.products.promotion_type_name }>
+                    <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=starbuy ctl=site_team act=index arg0=$goods.products.product_id arg1=$goods.products.promotion_type_id}>"><{$goods.name}></a>
+                        <{else}>
+                        <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>
+                            <{/if}>
+                            <{else}>
+                            <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>&nbsp;<span style="color:#fff;background:red;font-weight:bold;">预售</span>
+                                <{/if}>
+
+                                <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
+                                <{foreach from=$goods.tags item=tags}>
+                                <{if $tags.params.tag_showOnIndex == 'on'}>
+                                <span class="text-tag-<{$tags.params.pic_loc}>" style="background-color:<{$tags.tag_bgcolor|default:'transparent'}>;color:<{$tags.tag_fgcolor}>;opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><{$tags.tag_name}></span>
+                                <{/if}>
+                                <{/foreach}>
+                                <{/if}>
+                            </h3>
+                            <a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                            <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
+                            </a>
+                            <div class="goods-desc"><{$goods.brief}></div>
+                            <div class="goods-comment">
+                                <{if $point_status == 'on'}>
+                                <{if $goods.comments_count > 0}>
+                                <em class="stars stars-<{$goods.goods_point.avg_num*10}>">
+                                    <span class="below"><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i></span><span class="above"><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i></span>
+                                </em>
+                                <{if $commentListListnum=='true'}>
+                                <a href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>#product_comment"><b><{$goods.comments_count}></b><{t}>条评论<{/t}></a>
+                                <{/if}>
+                                <{else}>
+                                <{if $commentListListnum=='true'}>
+                                <{t}>暂无评论<{/t}>
+                                <{/if}>
+                                <{/if}>
+                                <{/if}>
+                            </div>
+                            <div class="promotion-tags">
+                                <{if $goods.promotion_tags && $env.conf.b2c.gallery.display.promotion == 'true'}>
+                                <{foreach from=$goods.promotion_tags item=pTag}>
+                                <span class="tag"><{$pTag.tag_name}></span>
+                                <{/foreach}>
+                                <{/if}>
+
+                                <{if $goods.products.promotion_type_name }>
+                                <span class="tag"><{$goods.products.promotion_type_name}></span>
+                                <{/if}>
+                            </div>
+                </div>
+            </li>
+            <{/foreach}>
+        </ul>
+        <{/if}>
+    </div>
+    <{pagers data=$pager}>
+
+</div>
+</div>
+</div></div>
+
+<div class="recom">
+    <div class="recom_bt">
+        <h3>超过了80%的用户购买了以下图书</h3>
+    </div>
+    <div class="recom_main">
+        <div id=feature>
+            <div id=block>
+                <div id=botton-scroll>
+                    <ul>
+                        <{foreach from=$goodsData22 key=key item=goods}>
+                        <li class="lb_first">
+                            <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
+                            <div class="recom_sm"><{$goods.name|strip_tags}></div>
+                            <div class="recom_jg"><{$goods.products.price|cur_odr}></div>
+                        </li>
+                        <{/foreach}>
+                        <!--<li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img2.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>
+                         <li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img3.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>
+                         <li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img4.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>
+                         <li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img5.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>
+                        <li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img1.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>
+                        <li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img2.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>
+                         <li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img3.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>
+                         <li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img4.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>
+                         <li>
+                           <img src="<{$env.app.res_url}>/css/new/images/img5.png" >
+                           <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                           <div class="recom_jg">￥32.75</div>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+            <a class=prev target='main' href="javascript:void();">Previous</a>
+            <a class=next target='main' href="javascript:void();">Next</a> </div>
+    </div>
+    <!--mobile-->
+    <div class="mobile_recom_main">
+        <div class="tj-swiper-container tj-swiper-container-horizontal">
+            <div class="tj-swiper-wrapper">
+                <{foreach from=$goodsData22 key=key item=goods}>
+                <div class="tj-swiper-slide tj-swiper-slide-active">
+                    <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
+                    <div class="recom_sm"><{$goods.name|strip_tags}></div>
+                    <div class="recom_jg"><{$goods.products.price|cur_odr}></div>
+                </div>
+                <{/foreach}>
+                <!--
+
+                      <div class="tj-swiper-slide tj-swiper-slide-active">
+                         <img src="<{$env.app.res_url}>/css/new/images/img1.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide tj-swiper-slide-next">
+                         <img src="<{$env.app.res_url}>/css/new/images/img2.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide">
+                         <img src="<{$env.app.res_url}>/css/new/images/img3.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide">
+                         <img src="<{$env.app.res_url}>/css/new/images/img4.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide">
+                         <img src="<{$env.app.res_url}>/css/new/images/img5.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide">
+                         <img src="<{$env.app.res_url}>/css/new/images/img1.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide">
+                         <img src="<{$env.app.res_url}>/css/new/images/img2.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide">
+                         <img src="<{$env.app.res_url}>/css/new/images/img3.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide">
+                         <img src="<{$env.app.res_url}>/css/new/images/img4.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>
+                      <div class="tj-swiper-slide">
+                         <img src="<{$env.app.res_url}>/css/new/images/img5.png" >
+                         <div class="recom_sm">步步高 学案导学与随堂笔记 地理 必修1</div>
+                         <div class="recom_jg">￥32.75</div>
+                      </div>-->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <script src="http://www.xinhuabest.com/public/app/site/lang/zh_CN/js/tj.swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.tj-swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            /*slidesPerGroup: 3,*/
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <!--mobile-->
+</div>
+<!--图标-->
+<!--<div class="icon">
+    <div class="icon1"><p class="icon_text">圆珠笔/中性笔</p></div>
+    <div class="icon2"><p class="icon_text">笔记本/记事本</p></div>
+    <div class="icon3"><p class="icon_text">文具盒/笔袋</p></div>
+    <div class="icon4"><p class="icon_text">橡皮</p></div>
+    <div class="icon5"><p class="icon_text">铅笔</p></div>
+</div>
+--></div></div>
+
+
+
+<{/if}>
+
+<!--底部-->
+<div class="foot">
+    <div class="footer">
+        <div class="f_nav">
+            <ul>
+                <li><a target='main' href="about_us.html">关于我们</a></li>
+                <li class="line">|</li>
+                <li><a target='main' href="#">使用指南</a></li>
+                <li class="line">|</li>
+                <li><a target='main' href="cont_us.html">联系方式</a></li>
+            </ul>
+        </div>
+        <div class="f_bq">河北省新华书店版权所有</div>
+        <div class="f_js">河北天迈提供技术支持</div>
+    </div>
+</div>
+
+<script>
+
+    jQuery(".list_pages li").click(function(){
+        jQuery(this).addClass("active").siblings().removeClass("active");
+    });
+
+</script>
+
+
+
+<!-------------------弹出地区------------->
+
+<div class="tanc"  id="pc_tc">
+    <div class="position_tc">
+        <div class="tc_button" style="display: none;"></div>
+        <div class="tc_city">
+            <div class="tc_citys">
+                <div style="    position: relative;">
+                    <select id="s_province" name="s_province" onchange="selectcity(this.value,'#s_city','#s_county')"></select>
+                    <select id="s_city" name="s_city"><option value="选择市">选择区县</option></select>
+
+                    <input type="text" style="margin: 0; width: 18%; padding: 0;padding-left: 1%;    background: none;" name="s_county" id="s_county" placeholder="填写学校" onkeyup="selectschoolpc(this.value,'#s_province','#s_city','#s_county')">
+                    <ul class="selectschoolpc" id="selectschoolpc" style="display: none;">
+
+                    </ul>
+
+                    <select id="s_grade" name="s_grade">
+                        <option value="选择年级">选择年级</option>
+                        <option value="一年级">一年级</option>
+                        <option value="二年级">二年级</option>
+                        <option value="三年级">三年级</option>
+                        <option value="四年级">四年级</option>
+                        <option value="五年级">五年级</option>
+                        <option value="六年级">六年级</option>
+                        <option value="七年级">七年级</option>
+                        <option value="八年级">八年级</option>
+                        <option value="九年级">九年级</option>
+                        <option value="大一">大一</option>
+                        <option value="大二">大二</option>
+                        <option value="大三">大三</option>
+                        <option value="大四">大四</option>
+
+
+
+                    </select>
+                    <input type="text" style="margin: 0; width: 18%; padding: 0;padding-left: 1%;    background: none;" name="s_class" id="s_class" placeholder="填写班级" />
+                    <!-- <select id="s_class" name="s_class">
+                         <option value="选择班级">选择班级</option>
+                         <option value="1班">1班</option>
+                         <option value="2班">2班</option>
+                         <option value="3班">3班</option>
+                         <option value="4班">4班</option>
+                         <option value="5班">5班</option>
+                         <option value="6班">6班</option>
+                         <option value="7班">7班</option>
+                         <option value="8班">8班</option>
+                         <option value="9班">9班</option>
+                         <option value="10班">10班</option>
+                         <option value="11班">11班</option>
+                         <option value="12班">12班</option>
+                         <option value="13班">13班</option>
+                         <option value="14班">14班</option>
+                         <option value="15班">15班</option>
+                         <option value="16班">16班</option>
+                         <option value="17班">17班</option>
+                         <option value="18班">18班</option>
+                         <option value="19班">19班</option>
+                         <option value="20班">20班</option>
+
+                     </select>-->
+
+
+                </div>
+                <div id="show"></div>
+            </div>
+        </div>
+        <div class="tc_tj"><a target='main' href="javascript:;" onclick="querendiqu(0)">点击确认</a></div>
+        <div class="pc_close">关闭</div>
+    </div>
+</div>
+
+<!--mobile-->
+<div class="m_tanc">
+    <div class="m_position_tc">
+        <div class="m_tc_button" style="display: none;"></div>
+        <!--close-->
+        <div class="m_close_off" style="display:block;">关闭</div>
+        <!--close-->
+        <div class="m_tc_text">
+            <div class="m_tc_text1">
+                <a class="m_tc_spic"></a>
+                <a class="m_tc_wpic"></a>
+            </div>
+            <a class="m_tc_text2"></a>
+            <a class="m_tc_text3"></a>
+        </div>
+        <div class="m_tc_city">
+            <div class="m_tc_citys">
+                <div>
+                    <select id="m_s_province" name="s_province" onchange="selectcity(this.value,'#m_s_city','#m_s_county')">
+
+                    </select>
+                    <select id="m_s_city" name="s_city">
+                        <option value="选择市">选择区县</option>
+                    </select>
+                    <div class="wr_school" style=" width:100%; height:auto; overflow:hidden; border-radius:20px; margin-top:6%;">
+                        <input style="width: 100%; display:block; border:none!important; overflow:hidden; outline:none; margin-top:0!important; background:none!important;" type="text" name="s_county" id="m_s_county" placeholder="填写学校" onkeyup="selectschool(this.value,'#m_s_province','#m_s_city','#m_s_county')">
+                    </div>
+                    <style>
+                        .selectschool{
+                            background: #fff;    position: absolute;width: 82%;margin-top: 10px; padding: 10px;z-index: 9;    border-radius: 9px;
+                            display: none;    max-height: 230px;
+                            overflow: auto;
+
+                        }
+                        .selectschoolpc{
+                            position: absolute;
+                            left: 40%;
+                            top: 65px;
+                            background: #fff;
+                            padding: 10px;
+                            border-radius: 9px;
+                            max-height: 230px;
+                            overflow: auto;
+                        }
+                        .selectschoolpc li{
+                            padding: 5px;
+                        }
+                        .selectschool li{
+                            padding: 5px;
+                        }
+                    </style>
+
+                    <script type="text/javascript">
+                        jQuery(document).ready(function(){
+                            jQuery('#m_s_county').blur(function(){
+                                // alert(a);
+                                setTimeout(function close_sug(){
+                                    jQuery('#selectschool').hide();
+                                    jQuery('#selectschoolpc').hide();
+                                },100);
+                            });
+                        });
+
+                    </script>
+
+                    <ul class="selectschool" id="selectschool"></ul>
+
+                    <select id="m_s_grade" name="s_grade">
+                        <option value='选择年级'>选择年级</option>
+                        <option value='一年级'>一年级</option>
+                        <option value='二年级'>二年级</option>
+                        <option value='三年级'>三年级</option>
+                        <option value='四年级'>四年级</option>
+                        <option value='五年级'>五年级</option>
+                        <option value='六年级'>六年级</option>
+                        <option value='七年级'>七年级</option>
+                        <option value='八年级'>八年级</option>
+                        <option value='九年级'>九年级</option>
+                        <option value="大一">大一</option>
+                        <option value="大二">大二</option>
+                        <option value="大三">大三</option>
+                        <option value="大四">大四</option>
+                    </select>
+                    <div class="wr_school" style=" width:100%; height:auto; overflow:hidden; border-radius:20px; margin-top:6%;">
+                        <input style="width: 100%; display:block; border:none!important; overflow:hidden; outline:none; margin-top:0!important; background:none!important;" type="text" name="s_class" id="m_s_class" placeholder="填写班级" />
+                    </div>
+                    <!-- <select id="m_s_class" name="s_class">
+                         <option value="选择班级">选择班级</option>
+                         <option value="1班">1班</option>
+                         <option value="2班">2班</option>
+                         <option value="3班">3班</option>
+                         <option value="4班">4班</option>
+                         <option value="5班">5班</option>
+                         <option value="6班">6班</option>
+                         <option value="7班">7班</option>
+                         <option value="8班">8班</option>
+                         <option value="9班">9班</option>
+                         <option value="10班">10班</option>
+                         <option value="11班">11班</option>
+                         <option value="12班">12班</option>
+                         <option value="13班">13班</option>
+                         <option value="14班">14班</option>
+                         <option value="15班">15班</option>
+                         <option value="16班">16班</option>
+                         <option value="17班">17班</option>
+                         <option value="18班">18班</option>
+                         <option value="19班">19班</option>
+                         <option value="20班">20班</option>
+                     </select>-->
+
+                </div>
+                <div id="show"></div>
+            </div>
+        </div>
+
+        <div class="m_tc_tj"><a target='main' href="javascript:;" onclick="querendiqu(1)">点击确认</a></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(function(){
+        var s_province=jQuery.cookie('s_province');
+//        if(!s_province){
+//            s_province = '石家庄市';
+//        }
+        var s_city=jQuery.cookie('s_city');
+//                if(!s_city){
+//                    s_city = '桥西区';
+//        }
+
+        var s_county=jQuery.cookie('s_county');
+//                if(!s_county){
+//                    s_county = '草场街小学';
+//        }
+
+        var s_grade=jQuery.cookie('s_grade');
+//                if(!s_grade){
+//                    s_grade = '九年级';
+//        }
+
+        var s_class=jQuery.cookie('s_class');
+        //位置
+        var mywz='';
+        if(s_province){
+            mywz+=s_province;
+        }
+        if(s_city){
+            mywz+=">"+s_city;
+        }
+        if(s_county){
+            mywz+=">"+s_county;
+        }
+        if(s_grade){
+            mywz+=">"+s_grade;
+        }
+        if(s_class){
+            mywz+=">"+s_class;
+        }
+        jQuery("#dqwz").html(mywz);
+        jQuery("#dqwz2").html(mywz);
+        jQuery("#dqwz3").html(mywz);
+        jQuery.get("http://www.xinhuabest.com/select.php?act=get_c&c="+s_province, function(result){
+            jQuery("#m_s_province").append(result);//指定元素的结尾插入内容
+            jQuery("#s_province").append(result);
+        });
+        if(s_city){
+            selectcity(s_province,'#m_s_city','#m_s_county',s_city,1);
+            selectcity(s_province,'#s_city','#s_county',s_city,1);
+        }
+        if(s_county){
+
+            jQuery("#m_s_county").val(s_county);
+            jQuery("#s_county").val(s_county);
+
+        }
+        if(s_grade){
+            jQuery("#m_s_grade").val(s_grade);
+            jQuery("#s_grade").val(s_grade);
+
+        }
+        if(s_class){
+            jQuery("#m_s_class").val(s_class);
+            jQuery("#s_class").val(s_class);
+        }
+        //jQuery.cookie('s_province', s_province);
+        //jQuery.cookie('s_city', s_city);
+        //jQuery.cookie('s_county', s_county);
+        //jQuery.cookie('s_grade', s_grade);
+        //jQuery.cookie('s_class', s_class);
+        //window.onload=function(){
+        //    setTimeout('querendiqu(1)',1000);
+        //   clearTimeout();
+        //}
+    });
+
+    //function tiaozhuan(){
+    // window.location.href="http://www.xinhuabest.com/index.php/gallery-index_new-112.html?scontent=21,";
+    //}
+
+    function selectcity(c,cid,sid,select,flg){
+        var select=select?select:'';
+        var flg=flg?flg:0;
+        jQuery.get("http://www.xinhuabest.com/select.php?act=get_d&c="+c+"&select="+select, function(result){
+            jQuery(cid).empty();
+            if(flg!=1){
+                jQuery(sid).val('');
+            }
+
+            jQuery(cid).append(result);
+        });
+    }
+    function selectschool(d,pid,cid,sid,select,c){
+        var select=select?select:'';
+        var c=c?c:0;
+        if(c==''){
+            var c=jQuery(cid).val();
+        }
+        var p=jQuery(pid).val();
+        jQuery.get("http://www.xinhuabest.com/select.php?act=get_s&p="+p+"&c="+c+"&d="+d+"&select="+select, function(result){
+            // alert(result);
+            if(result!=0){
+                jQuery('#selectschool').html(result);
+                jQuery('#selectschool').show();
+            }else{
+                jQuery('#selectschool').hide();
+            }
+
+        });
+    }
+    function selectschoolpc(d,pid,cid,sid,select,c){
+        var select=select?select:'';
+        var c=c?c:0;
+        if(c==''){
+            var c=jQuery(cid).val();
+        }
+        var p=jQuery(pid).val();
+        //alert("http://www.xinhuabest.com/select.php?act=get_s&p="+p+"&c="+c+"&d="+d+"&select="+select);
+        jQuery.get("http://www.xinhuabest.com/select.php?act=get_s&p="+p+"&c="+c+"&d="+d+"&select="+select,  function(result){
+            // alert(result);
+            if(result!=0){
+                jQuery('#selectschoolpc').html(result);
+                jQuery('#selectschoolpc').show();
+            }else{
+                jQuery('#selectschoolpc').hide();
+            }
+
+        });
+    }
+    function scewm(){
+        var url=window.location.href;
+        //alert(url);
+        var s_province=jQuery.cookie('s_province');
+        var s_city=jQuery.cookie('s_city');
+        var s_county=jQuery.cookie('s_county');
+        //alert(s_county);
+        var s_grade=jQuery.cookie('s_grade');
+        var s_class=jQuery.cookie('s_class');
+        jQuery.get("http://www.xinhuabest.com/select.php?act=ewm&f1="+s_province+"&f2="+s_city+"&f3="+s_county+"&f4="+s_grade+"&f5="+s_class+"&f6="+url,         function(result){
+            if(result){
+                jQuery('#ewmlist').html(result);
+            }
+        });
+    }
+    function fhome(){
+        //jQuery.cookie('s_province', '');
+        //jQuery.cookie('s_city', '');
+        //jQuery.cookie('s_county', '');
+        //jQuery.cookie('s_grade', '');
+        //jQuery.cookie('s_class', '');
+        // jQuery.cookie('beizhu', s_province+','+s_city+','+s_county+','+s_grade+','+s_class);
+        //jQuery.cookie('beizhu', '');
+        //jQuery(".tanc").fadeOut();
+        window.location.href="http://www.xinhuabest.com/index.php/gallery-index_new-94.html?from=singlemessage&isappinstalled=0";
+    }
+    function xuanzhong(school){
+        var s=jQuery(school).html();
+        jQuery('#m_s_county').val(s);
+        jQuery('#s_county').val(s);
+        jQuery('#selectschool').hide();
+        jQuery('#selectschoolpc').hide();
+    }
+    jQuery(".chongxuan").click(function(){
+        jQuery('.m_tanc,.m_close_off').show();
+    })
+    jQuery(".ghqy_new").click(function(){
+        jQuery('.tanc,.close_off').show();
+    })
+    if(jQuery.cookie('beizhu')){
+        jQuery('.m_tanc,.tanc').hide();
+        jQuery('#gallery_sortbar').show();
+        //jQuery('#cart1').css('display','block');
+        jQuery('#cart1').show();
+        //alert(0);
+    }
+</script>
+
+<script type="text/javascript">
+    jQuery(".m_close_off").click(function(){
+        jQuery('.m_tanc').hide();
+        jQuery('#gallery_sortbar').show();
+        jQuery('#cart1').show();
+    })
+</script>
+
+<!--1013-->
+<!--<script type="text/javascript">
+jQuery(function(){
+	jQuery(document).on('touchmove',function(e){e.preventDefault();})
+})
+
+
+</script>
+
+<script type="text/javascript">
+    jQuery(".m_tc_tj").click(function(){
+       jQuery(document).off('touchmove')
+		alert(1);
+    })
+</script>
+-->
+<script type="text/javascript">
+    $(function(){
+        $(document).on('touchstar',function(e){
+            e.preventDefault();
+        })
+    })
+</script>
+
+
+<!--<script>
+var isPhone6p = (function(){
+var h=window.innerHeight,w=window.innerWidth,useragent = navigator.userAgent.toLowerCase(),isP6p = false;
+if(useragent.match(/mobile/i)!==null && useragent.match(/iphone/i)!==null && ( h>w ? (Math.abs(w-414)<10 && h<=736) : (Math.abs(w-736)<10) && h<=414)) isP6p = true;
+　return isP6p;
+})();
+</script>
+-->
+
+<script type="text/javascript">
+    jQuery(".chongxuan").click(function(){
+        jQuery('#gallery_sortbar').hide();
+        jQuery('#cart1').hide();
+
+    })
+</script>
+
+<script type="text/javascript">
+    jQuery(".m_tc_tj").click(function(){
+        jQuery('.grade_body').show();
+
+    })
+</script>
+<!--1013-->
+
+<script type="text/javascript">
+    function buy(){
+        alert('加入购物车成功！');
+        jQuery('#cart1').show();
+    }
+</script>
+
+<script type="text/javascript">
+    /*var Gid  = document.getElementById ;
+     var showArea = function(){
+     Gid('show').innerHTML = "<h3>市" + Gid('s_province').value + " - 市" +
+     Gid('s_city').value + " - 县/区" +
+     Gid('s_county').value + "</h3>"+
+     Gid('s_grade').value + "</h3>"+
+     Gid('s_class').value + "</h3>"
+     }
+     //Gid('s_county').setAttribute('onchange','showArea()');*/
+</script>
+
+<script>
+var Router = {
+    'filter': {
+        query: 'http://www.xinhuabest.com/index.php/gallery-ajax_get_goods.html'
+    }
+};
+
+var Query = function(url, data, update, options) {
+    var self = this;
+    this.update = function(url, data, update, options) {
+        if(typeof(update) == 'object') {
+            update = Module.gallery.show;
+        }
+        options = Object.merge({
+            url: url,
+            link: 'ignore',
+            update: update
+        }, options || {});
+        new Request.HTML(options).post(data);
+    };
+    this.filter = function(data, fn){
+        var url = Router.filter.query;
+        self.update(url,data,Module.gallery.show, {
+            onRequest:function() {
+                // mask.show();
+            },
+            onSuccess:function(rs){
+                // mask.hide();
+                new DataLazyLoad({img:'data-src', lazyDataType:'img',onAfter:function(img){
+                    if(Browser.ie6) fixImageSize(img);
+                }});
+                setGridSize(Module.gallery.show.getElements('.gallery-grid .goods-item'), ['.goods-name', '.promotion-tags'], 4);
+                //updateNum();
+                miniCart.init();
+                fn&&fn(rs);
+            }
+        });
+    };
+    this.addtocart = function(url, data, target) {
+        var form = jQuery('_addtocart_submitform') || new Element('form#_addtocart_submitform',{
+            action: url,
+            method: 'post',
+            target: target,
+            style: 'display:none'
+        }).inject(document.body);
+        var formElements = Array.from(data).invoke('clone', false);
+        form.empty().adopt(formElements).submit();
+    };
+};
+Query = new Query;
+
+Module = new Module('gallery', ['filter', {'selected': 'filter_selected'}, 'sortbar', 'show', 'compare']);
+
+
+Module.gallery.sortbar.addEvents({
+
+    'click:relay(a.flip:not(.over))':function(e){
+
+        e.preventDefault();
+        var self = this;
+        Query.filter(getData(this), function(e){
+            self.getSiblings('.over').removeClass('over');
+            var page = getFlipPage();
+            var parent = self.getParent();
+            if(page <= 1) parent.getElement('.prev').addClass('over');
+            else if(page >= getPage().total) parent.getElement('.next').addClass('over');
+        });
+    }
+});
+
+function getData(el) {
+    var cat = 'cat_id=<{$cat_id}>';
+    var showtype = 'showtype=list_new';
+    var vcat = 'virtual_cat_id=';
+    var filter= [cat,vcat,showtype];
+    var param = location.search;
+    if(param) {
+        param = param.split('?')[1];
+        filter.push(param);
+    }
+    var page;
+    if(el) page = 'page=' + getFlipPage(el);
+    //var data = filter.concat(Array.from(Module.gallery.selected.getElements('[data-fid]').get('data-fid')), decodeURI(Module.gallery.sortbar.toQueryString()), page);
+    var data = filter.concat(decodeURI(Module.gallery.sortbar.toQueryString()), page);
+    data = data.join('&').replace(/-/g, '[]=');
+    data && Memory.set('gallery.filter', data);
+    return data;
+}
+
+
+function getFlipPage(el) {
+    var page = getPage().current;
+    if(el) {
+        if(el.hasClass('next')) page += 1;
+        else if(el.hasClass('prev')) page -= 1;
+        else page = el.get('text');
+    }
+    return page;
+}
+function getPage() {
+    var pagedata = {};
+
+    var pagelimit = '10';
+    try {
+        pagedata = JSON.decode(Module.gallery.show.getElement('.action-pagedata').value) || {};
+    }catch(e){}
+    return {
+        sum: pagedata.total || 0,
+        current: pagedata.pagecurrent || 1,
+        total: pagedata.pagetotal || 1
+    };
+}
+
+function updateNum() {
+    var page = getPage();
+    jQuery('filter_container').getElement('.op-search-result').innerHTML = page.sum;
+    Module.element('gallery.sortbar', '.page-current').innerHTML = page.current;
+    Module.element('gallery.sortbar', '.page-total').innerHTML = page.total;
+    var prev = Module.element('gallery.sortbar', '.page-action .prev');
+    var next = Module.element('gallery.sortbar', '.page-action .next');
+    if(page.total == 1) {
+        prev.addClass('over');
+        next.addClass('over');
+    }
+    else if(page.total > 1){
+        next.removeClass('over');
+        if(page.total == page.current) {
+            prev.removeClass('over');
+            next.addClass('over');
+        }
+        else {
+            if(page.current == 1) {
+                prev.addClass('over');
+            }
+            else {
+                prev.removeClass('over');
+            }
+            next.removeClass('over');
+        }
+    }
+}
+//== 为数量选择框绑定事件
+bindQuantityEvent(Module.gallery.show,setQuantity);
+
+function bindQuantityEvent(elements, callback) {
+    elements = document.id(elements) || $$(elements);
+    if(!elements && !elements.length) return;
+    var value = '';
+    elements.addEvents({
+        //= 数量按钮
+        'click:relay(.btn-decrease,.btn-increase)': function(e) {
+            var input = this.getParent().getElement('.action-quantity-input');
+            //alert(input);
+            value = +input.value;
+            input.value = this.hasClass('btn-decrease') ? value - 1 : value + 1;
+            callback && callback(input, value);
+        },
+        //= 数量输入框
+        'focus:relay(.action-quantity-input)': function(e){
+            value = +this.value;
+        },
+        'change:relay(.action-quantity-input)': function(e) {
+            callback && callback(this, value);
+        }
+    });
+}
+//== 获取商品数量值
+function getQuantity(el, type) {
+    return el.getElement('input[name=' + type + ']').value;
+}
+//== 设置商品数量
+function setQuantity(input, value) {
+    var type = 'product';
+    inputCheck(input, {min: input.get('min'), max: input.get('max'), 'default': value});
+}
+//== 商品数量输入框正确性检测
+function inputCheck(input, options) {
+    if(!input) return false;
+    options = options || {};
+    if(isNaN(options.min)) options.min = 1;
+    if(isNaN(options.max)) options.max = 9999;
+    options['default'] = options['default'] || options.min;
+    var value = +input.value;
+    var tips = new Tips(input);
+    var pre = '';
+    var msg = '';
+    if(options.store && options.store - value <= 0) {
+        pre = '库存有限，';
+    }
+    if(value < options.min) {
+        input.value = options.min;
+        msg = '此商品的最小购买数量为' + options.min + '件';
+    }
+    else if(value > options.max){
+        input.value = options.max;
+        msg = pre + '此商品最多只能购买' + options.max + '件';
+    }
+    else if(isNaN(value)) {
+        input.value = options['default'];
+        msg = '只允许输入数字';
+    }
+    if (msg) {
+        tips.show(msg);
+        return false;
+    }
+    tips.hide();
+    return true;
+}
+
+
+</script>
+<script>
+    var Shop = window['Shop'] || {"url":{"shipping":"\/index.php\/cart-shipping.html","total":"\/index.php\/cart-total.html","region":"\/index.php\/tools-selRegion.html","payment":"\/index.php\/cart-payment.html","purchase_shipping":"\/index.php\/cart-purchase_shipping.html","purchase_def_addr":"\/index.php\/cart-purchase_def_addr.html","purchase_payment":"\/index.php\/cart-purchase_payment.html","get_default_info":"\/index.php\/cart-get_default_info.html","diff":"\/index.php\/product-diff.html","fav_url":"\/index.php\/member-ajax_fav.html","datepicker":"http:\/\/www.xinhuabest.com\/public\/app\/site\/statics\/js_mini","placeholder":"http:\/\/www.xinhuabest.com\/public\/app\/b2c\/statics\/images\/imglazyload.gif"},"base_url":"\/"};
+    window.addEvent('domready',function(){
+        var __time_out = 1000;
+        if (Shop.set != undefined&&Shop.set.refer_timeout) __time_out = Shop.set.refer_timeout;
+        var ReferObj ={};
+        Object.append(ReferObj,{
+            serverTime:1481162125,
+            init:function(){
+                var FIRST_REFER=Memory.get('first_refer');
+                var NOW_REFER=Memory.get('now_refer');
+                var nowDate=this.time=this.serverTime*1000;
+                if(!window.location.href.test('#r-')&&!document.referrer||document.referrer.test(document.domain))return;
+                if(window.location.href.test('#r-')) Memory.clean('n');
+                if(!FIRST_REFER){
+
+                    if(NOW_REFER){
+                        Memory.set('first_refer',NOW_REFER,this.getTimeOut(JSON.decode(NOW_REFER).DATE));
+                    }else{
+                        this.setRefer('first_refer',__time_out);
+                    }
+                }
+                this.setRefer('now_refer',__time_out);
+                this.createGUID();
+            },
+            getUid:function(){
+                var lf=window.location.href,pos=lf.indexOf('#r-');
+                return pos!=-1?lf.substr(pos+4):'';
+            },
+            getRefer:function(){
+                return document.referrer?document.referrer:'';
+            },
+            setRefer:function(referName,timeout){
+                var uid=this.getUid(),referrer=this.getRefer();
+                var data={'ID':uid,'REFER':referrer,'DATE':this.time};
+
+                if('now_refer'==referName){
+                    var refer=JSON.decode(Memory.get('first_refer'));
+                    if(uid!=''&&refer&&refer.ID==''){
+                        var fdata={'ID':uid,'REFER':refer.REFER,'DATE':refer.DATE};
+                        Memory.set('first_refer',JSON.encode(fdata),this.getTimeOut(refer.DATE));
+                    }else if(uid==''){
+                        Object.append(data,{'ID':refer.ID});
+                    }
+                }
+                Memory.set(referName,JSON.encode(data),__time_out||15);
+            },
+            getTimeOut:function(nowDate){
+                var timeout=nowDate+__time_out*24*3600*1000;
+                var date=new Date(timeout);
+                return date;
+            },
+            createGUID:function(){
+                var GUID = (function(){
+                    var S4=function(){
+                        return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+                    };
+                    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4()).toUpperCase();
+                })();
+                Memory.set('n',GUID,3650);
+            }
+        });
+        ReferObj.init();
+    });
+
+
+    miniCart = {
+        'show':function(target){
+            target = $(target);
+            if (!target) return;
+
+            if(this.dialog){
+                this.hide();
+            }
+
+            var options = {
+                body: 'popup-body',
+                header: 'popup-header',
+                close: 'popup-btn-close',
+                content:'popup-content',
+                title:'正在加入购物车',
+                main:'<div class="loading">loading...</div>'
+            }, dialog = this.dialog = new Element('div#mini_cart_dialog.popup-container.mini-cart-dialog',{
+                'html': $('popup_template').get('html').substitute(options),
+                styles:{
+                    display:'block',
+                    zIndex: maxZindex('div', 1)
+                }
+            }).inject(document.body);
+
+            this.title = dialog.getElement('.popup-header h2');
+            this.close = dialog.getElements('.popup-btn-close');
+            this.content = dialog.getElement('.popup-content');
+            this.dialog.addEvent('click:relay(.popup-btn-close)',this.hide.bind(this));
+
+            var setSize = this.setSize = function(){
+                if(!dialog.isDisplayed()) return;
+                dialog.setStyles({
+                    top:target.getPosition().y+target.getSize().y,
+                    left:target.getPosition().x.limit(0,window.getSize().x-dialog.getSize().x) + window.getScroll().x
+                });
+            };
+
+            setSize();
+            window.addEvent('resize',setSize);
+        },
+        'hide':function(){
+            try{
+                this.dialog.destroy();
+                window.removeEvent('resize',this.setSize);
+            }catch(e){}
+        },
+        'load':function(options){
+            options = options || {};
+            options = Object.merge({
+                method: 'post',
+                onRequest: function(){
+                    miniCart.show(options.target);
+                },
+                onSuccess: function(re){
+                    if(re) {
+                        this.title.innerHTML = '提醒';
+                        this.content.innerHTML = re;
+                    }
+
+                    updateCartInfo();
+
+                    if(document.getElement('.minicart_box')&&document.getElement('.minicart_box').get('show_gallery')){
+                        document.getElement('.minicart_box').fireEvent('_show'); //迷你购物车
+                    }
+                    options.callback && options.callback(re);
+                }.bind(this),
+                onFailure: function(xhr){
+                    this.title.innerHTML = '提醒';
+                    this.content.innerHTML = '<div class="minicart-error"><p align="center">加入购物车失败。<br />可能库存不足或提交信息不完整。</p></div>';
+                }.bind(this)
+            },options||{});
+            if(!options.url) return false;
+
+            new Request(options).send(options.data ? options.data.toQueryString() + '&mini_cart=true' : 'mini_cart=true');
+        },
+        init:function(target, url, data){
+            var linktocart;
+            if(typeOf(target) == 'element') linktocart = target.getElements('[target=_dialog_minicart]');
+            else if(typeOf(target) == 'elements') linktocart = target;
+            else linktocart = $$('a[target=_dialog_minicart], button[target=_dialog_minicart]');
+            if(linktocart.length){
+                linktocart.addEvent('click',function(e){
+                    e.preventDefault();
+                    miniCart.load({url: url || this.href, data: data || this.getParent('.goods-item') || this.getParent('li'), target: this});
+                });
+            }
+        }
+    };
+
+    formToCart = function(container,target) {
+        container = $(container || document.body);
+        target = target || '.action-addtocart';
+        if(!container) return;
+
+        var formtocart = container.getElement('form[target=_dialog_minicart]') || container.getFirst().getParent('form[target=_dialog_minicart]');
+        if(formtocart) {
+            formtocart.addEvent('submit', function(e){
+                e.stop();
+                target = this.getElement(target) || this.getElement('*[type=submit]');
+                miniCart.load({
+                    url:this.action,
+                    method:this.method,
+                    data:this,
+                    target: target,
+                    callback: function() {
+                        target.removeClass('disabled');
+                    }.bind(this)
+                });
+            });
+        };
+    }
+
+    window.addEvent('domready',function(){
+        miniCart.init();
+        formToCart();
+    });
+</script>
+<script>
+    var Shop = window['Shop'] || {"url":{"shipping":"\/index.php\/cart-shipping.html","total":"\/index.php\/cart-total.html","region":"\/index.php\/tools-selRegion.html","payment":"\/index.php\/cart-payment.html","purchase_shipping":"\/index.php\/cart-purchase_shipping.html","purchase_def_addr":"\/index.php\/cart-purchase_def_addr.html","purchase_payment":"\/index.php\/cart-purchase_payment.html","get_default_info":"\/index.php\/cart-get_default_info.html","diff":"\/index.php\/product-diff.html","fav_url":"\/index.php\/member-ajax_fav.html","datepicker":"http:\/\/www.xinhuabest.com\/public\/app\/site\/statics\/js_mini","placeholder":"http:\/\/www.xinhuabest.com\/public\/app\/b2c\/statics\/images\/imglazyload.gif"},"base_url":"\/"};
+    window.addEvent('domready',function(){
+        var __time_out = 1000;
+        if (Shop.set != undefined&&Shop.set.refer_timeout) __time_out = Shop.set.refer_timeout;
+        var ReferObj ={};
+        Object.append(ReferObj,{
+            serverTime:1481162125,
+            init:function(){
+                var FIRST_REFER=Memory.get('first_refer');
+                var NOW_REFER=Memory.get('now_refer');
+                var nowDate=this.time=this.serverTime*1000;
+                if(!window.location.href.test('#r-')&&!document.referrer||document.referrer.test(document.domain))return;
+                if(window.location.href.test('#r-')) Memory.clean('n');
+                if(!FIRST_REFER){
+
+                    if(NOW_REFER){
+                        Memory.set('first_refer',NOW_REFER,this.getTimeOut(JSON.decode(NOW_REFER).DATE));
+                    }else{
+                        this.setRefer('first_refer',__time_out);
+                    }
+                }
+                this.setRefer('now_refer',__time_out);
+                this.createGUID();
+            },
+            getUid:function(){
+                var lf=window.location.href,pos=lf.indexOf('#r-');
+                return pos!=-1?lf.substr(pos+4):'';
+            },
+            getRefer:function(){
+                return document.referrer?document.referrer:'';
+            },
+            setRefer:function(referName,timeout){
+                var uid=this.getUid(),referrer=this.getRefer();
+                var data={'ID':uid,'REFER':referrer,'DATE':this.time};
+
+                if('now_refer'==referName){
+                    var refer=JSON.decode(Memory.get('first_refer'));
+                    if(uid!=''&&refer&&refer.ID==''){
+                        var fdata={'ID':uid,'REFER':refer.REFER,'DATE':refer.DATE};
+                        Memory.set('first_refer',JSON.encode(fdata),this.getTimeOut(refer.DATE));
+                    }else if(uid==''){
+                        Object.append(data,{'ID':refer.ID});
+                    }
+                }
+                Memory.set(referName,JSON.encode(data),__time_out||15);
+            },
+            getTimeOut:function(nowDate){
+                var timeout=nowDate+__time_out*24*3600*1000;
+                var date=new Date(timeout);
+                return date;
+            },
+            createGUID:function(){
+                var GUID = (function(){
+                    var S4=function(){
+                        return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+                    };
+                    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4()).toUpperCase();
+                })();
+                Memory.set('n',GUID,3650);
+            }
+        });
+        ReferObj.init();
+    });
+
+
+    miniCart = {
+        'show':function(target){
+            target = $(target);
+            if (!target) return;
+
+            if(this.dialog){
+                this.hide();
+            }
+
+            var options = {
+                body: 'popup-body',
+                header: 'popup-header',
+                close: 'popup-btn-close',
+                content:'popup-content',
+                title:'正在加入购物车',
+                main:'<div class="loading">loading...</div>'
+            }, dialog = this.dialog = new Element('div#mini_cart_dialog.popup-container.mini-cart-dialog',{
+                'html': $('popup_template').get('html').substitute(options),
+                styles:{
+                    display:'block',
+                    zIndex: maxZindex('div', 1)
+                }
+            }).inject(document.body);
+
+            this.title = dialog.getElement('.popup-header h2');
+            this.close = dialog.getElements('.popup-btn-close');
+            this.content = dialog.getElement('.popup-content');
+            this.dialog.addEvent('click:relay(.popup-btn-close)',this.hide.bind(this));
+
+            var setSize = this.setSize = function(){
+                if(!dialog.isDisplayed()) return;
+                dialog.setStyles({
+                    top:target.getPosition().y+target.getSize().y,
+                    left:target.getPosition().x.limit(0,window.getSize().x-dialog.getSize().x) + window.getScroll().x
+                });
+            };
+
+            setSize();
+            window.addEvent('resize',setSize);
+        },
+        'hide':function(){
+            try{
+                this.dialog.destroy();
+                window.removeEvent('resize',this.setSize);
+            }catch(e){}
+        },
+        'load':function(options){
+            options = options || {};
+            options = Object.merge({
+                method: 'post',
+                onRequest: function(){
+                    miniCart.show(options.target);
+                },
+                onSuccess: function(re){
+                    if(re) {
+                        this.title.innerHTML = '提醒';
+                        this.content.innerHTML = re;
+                    }
+
+                    updateCartInfo();
+
+                    if(document.getElement('.minicart_box')&&document.getElement('.minicart_box').get('show_gallery')){
+                        document.getElement('.minicart_box').fireEvent('_show'); //迷你购物车
+                    }
+                    options.callback && options.callback(re);
+                }.bind(this),
+                onFailure: function(xhr){
+                    this.title.innerHTML = '提醒';
+                    this.content.innerHTML = '<div class="minicart-error"><p align="center">加入购物车失败。<br />可能库存不足或提交信息不完整。</p></div>';
+                }.bind(this)
+            },options||{});
+            if(!options.url) return false;
+
+            new Request(options).send(options.data ? options.data.toQueryString() + '&mini_cart=true' : 'mini_cart=true');
+        },
+        init:function(target, url, data){
+            var linktocart;
+            if(typeOf(target) == 'element') linktocart = target.getElements('[target=_dialog_minicart]');
+            else if(typeOf(target) == 'elements') linktocart = target;
+            else linktocart = $$('a[target=_dialog_minicart], button[target=_dialog_minicart]');
+            if(linktocart.length){
+                linktocart.addEvent('click',function(e){
+                    e.preventDefault();
+                    miniCart.load({url: url || this.href, data: data || this.getParent('.goods-item') || this.getParent('li'), target: this});
+                });
+            }
+        }
+    };
+
+    formToCart = function(container,target) {
+        container = $(container || document.body);
+        target = target || '.action-addtocart';
+        if(!container) return;
+
+        var formtocart = container.getElement('form[target=_dialog_minicart]') || container.getFirst().getParent('form[target=_dialog_minicart]');
+        if(formtocart) {
+            formtocart.addEvent('submit', function(e){
+                e.stop();
+                target = this.getElement(target) || this.getElement('*[type=submit]');
+                miniCart.load({
+                    url:this.action,
+                    method:this.method,
+                    data:this,
+                    target: target,
+                    callback: function() {
+                        target.removeClass('disabled');
+                    }.bind(this)
+                });
+            });
+        };
+    }
+
+    window.addEvent('domready',function(){
+        miniCart.init();
+        formToCart();
+    });
+</script>
+<script id="popup_template" type="text/template">
+    <div class="{body}">
+        <div class="{header} clearfix">
+            <h2>{title}</h2>
+            <span><button type="button" title="关闭" class="{close}" hidefocus><i>×</i></button></span>
+        </div>
+        <div class="{content} clearfix">{main}</div>
+    </div>
+</script>
+<script id="message_template" type="text/template">
+    <div class="{body} clearfix">
+        <div class="icon">{icon}</div>
+        <div class="{content}">{main}</div>
+    </div>
+</script>
+<script id="dropmenu_template" type="text/template">
+    <div class="{body}">
+        <div class="{content} clearfix">{main}</div>
+    </div>
+</script>
+<!--2018-07-14 edit by zhang 影响打开网页速度，不知道干嘛用的，然后就注释掉了-->
+<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
+<!--<script>
+    var city = remote_ip_info['city']+'市';
+    jQuery('#s_province').val(city);
+    //change(1);
+    jQuery('#m_s_province').val(city);
+    //changes(1);
+
+</script>-->
+<div id="cart1" style="display:none" class="cart-concern-btm-fixed five-column">
+    <div class="concern-cart">
+
+        <a class="dong-dong-icn J_ping" report-eventid="MProductdetail_DongDongService" report-pageparam="1143562" report-eventlevel="5" id="imBottom"
+           href="http://wpa.qq.com/msgrd?v=3&uin=15944990904&site=oicqzone.com&menu=yes">
+            <em class="btm-act-icn"></em>
+							<span class="focus-info">
+																	联系卖家
+															</span>
+        </a>
+        <a class="love-heart-icn J_ping" id="focusOn" report-eventid="MProductdetail_AddtoFollowed" report-eventparam="1143562" report-pageparam="1143562" report-eventlevel="5">
+            <em class="btm-act-icn focus-out" id="attentionFocus"></em>
+            <i class="focus-scale"></i>
+            <span class="focus-info"> 热卖  </span>
+        </a>
+    </div>
+    <div class="action-list">
+        <a class="yellow-color add_cart" <{if $ismobile}> href="http://www.xinhuabest.com/index.php/wapsys/cart.html"<{else}>href="http://www.xinhuabest.com/index.php/gouwu.asp"<{/if }>">
+        去购物车
+        </a>
+        <a class="red-color directorder" <{if $ismobile}> href="http://www.xinhuabest.com/index.php/wapsys/cart-checkout.html"<{else}> href="http://www.xinhuabest.com/index.php/cart-checkout.html"<{/if}>>
+        去结算
+        </a>
+
+    </div>
+</div>
+
+<!--0323-->
+<div class="pc_ewm">
+    <a href="javascript:0;" class="cd-popup-trigger0"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/ewm.png"></a>
+
+</div>
+<div class="cd-popup">
+
+    <div class="cd-popup-container">
+        <!-- <div class="top">
+         <div class="topl">
+             <a class="house"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/house.png"></a>
+             <div class="topl_logo"><a href='/jiaofu.html'><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/logo.png" /></a></div>
+             <div class="topl_text">您好，欢迎来到河北省新华书店教育图书预订中心！</div>
+         </div>
+         <div class="topr" style=' width: 750px;'>
+             <a class="houses"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/house.png"></a>
+             <div class="topr_tel" style='margin-left: 175px;'><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/tel.png" /></div>
+         </div>
+     </div>-->
+        <div class="title" style="padding-top:80px"><img style="width:50%; display:block; margin:0 auto" src="<{$env.app.res_url}>/css/new/images/title.png" /></div>
+        <div class="position_else">
+            <div class="position_name" style="font-size:30px">已选：</div>
+            <div class="posi_location" id="dqwz3" style="font-size:30px"></div>
+            <!-- <div class="ghqy_new">更换区域</div>-->
+        </div>
+
+        <div class="sys">
+            <!--<img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/sys.png" />-->
+            <a class="sys_tp" id="ewmlistpc"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/yxewm.jpg" /></a>
+        </div>
+        <div class="sys_buy"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/bat.png" /></div>
+        <div class="sys_main"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/gmlc.jpg" /></div>
+        <a href="#" id="print">打印</a>
+        <a class="cd-popup-close"></a>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        $('#print').click(function(){
+            window.print();
+        });
+
+
+        $('.cd-popup-trigger0').on('click', function(event){
+
+            var url=window.location.href;
+            var s_province=jQuery.cookie('s_province');
+            var s_city=jQuery.cookie('s_city');
+            var s_county=jQuery.cookie('s_county');
+            //alert(s_county);
+            var s_grade=jQuery.cookie('s_grade');
+            var s_class=jQuery.cookie('s_class');
+            jQuery.get("http://www.xinhuabest.com/select.php?act=ewm&f1="+s_province+"&f2="+s_city+"&f3="+s_county+"&f4="+s_grade+"&f5="+s_class+"&f6="+url,         function(result){
+                if(result){
+                    jQuery('#ewmlistpc').html(result);
+                }
+            });
+
+
+            event.preventDefault();
+            $('.cd-popup').addClass('is-visible');
+        });
+        $('.cd-popup').on('click', function(event){
+            if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+                event.preventDefault();
+                $(this).removeClass('is-visible');
+            }
+        });
+        $(document).keyup(function(event){
+            if(event.which=='27'){
+                $('.cd-popup').removeClass('is-visible');
+            }
+        });
+    });
+</script>
+
+<!--mobile-->
+<div class="ewm_xf" id="ewmlist"><img src="http://www.xinhuabest.com/public/app/b2c/statics/css/new/images/ewm.png" onclick="scewm()"></div>
+<script type="text/javascript">
+    jQuery(".pc_close").click(function(){
+        jQuery("#pc_tc").hide();
+    });
+</script>
+
+</body>
+</html>
