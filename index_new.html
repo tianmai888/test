@@ -194,7 +194,7 @@
 <div class="title"><img src="<{$env.app.res_url}>/css/new/images/title.png" /></div>
 
 <!---0323--->
-<div class="position_else">
+<div class="position_else" style="display: none">
     <div class="position_name">已选：</div>
     <div class="posi_location" id="dqwz"></div>
     <a class="ghqy_new">更换区域</a>
@@ -419,7 +419,7 @@
 
 </div>
 <!--0323-->
-<div class="m_position_else"><!--手机端已选-->
+<div class="m_position_else" style="display: none"><!--手机端已选-->
     <div class="position_name">已选：</div>
     <div class="posi_location" id="dqwz2"></div>
 </div>
@@ -535,7 +535,7 @@
             if(s_province=='选择地市'||s_city=='选择区县'||s_county=='填写学校'||s_grade=='选择年级'||s_class=='选择班级'){
                 alert('请选择您的班级');
             }else{
-                jQuery.cookie('s_province', s_province);
+                jQuery.cookie('s_province', s_province);//alert('123');
                 jQuery.cookie('s_city', s_city);
                 jQuery.cookie('s_county', s_county);
                 jQuery.cookie('s_grade', s_grade);
@@ -691,12 +691,12 @@
 <!-----------年级内容------------->
 
 <!---新添加的六本指定图书begin-->
-<div class="grade_main gallery-sortbar" style="display: none;">
+<div class="grade_main gallery-sortbar" >
 <div class="grade_mains  gallery-show">
 <div class="gallery-list">
 <input type="hidden" class="action-pagedata" value="{total:<{$total}>, pagecurrent:<{$page|default:1}>, pagetotal:<{$pagetotal}>}">
 <!--20180803 edit by zhang 如果想改回来，直接删掉下边的<ul></ul>即可-->
-<ul>
+<ul style="display: none;">
 <li class="goods-item clearfix">
     <div class="goods-pic">
         <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html"><img class="action-goods-img" alt="五年中考三年模拟 初中英语 七年级上册 人教版 2019版初中同步" src="http://www.xinhuabest.com/public/images/01/9c/be/5d544af81eb8cb555bd93fb3cf91d215991cdf19.jpg?1533518934#h"></a>
@@ -1751,6 +1751,279 @@
 
 
 </ul>
+
+
+<ul>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26884.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/98/6d/26/b959f6971c2d446f6073894ec65850d2f20e14fe.jpg?1536310634#h" alt="21世纪职业教育行业英语 冬奥会项目英语"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26623">
+            <input type="hidden" name="goods[product_id]" value="26884">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26623",img:"http://www.xinhuabest.com/public/images/98/6d/26/b959f6971c2d446f6073894ec65850d2f20e14fe.jpg?1536310634#h",name:"21世纪职业教育行业英语 冬奥会项目英语",price:"￥35.70"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥35.70</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥42.00</del></li>
+            <li><label for="">节省：</label><span>￥6.30</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥35.70</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26884.html">21世纪职业教育行业英语 冬奥会项目英语</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26883.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/72/e2/b3/52400e637ce726fd9249fb27d37ca29452a0a094.jpg?1536303856#h" alt="新时代大学英语 视听说教程1"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26622">
+            <input type="hidden" name="goods[product_id]" value="26883">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26622",img:"http://www.xinhuabest.com/public/images/72/e2/b3/52400e637ce726fd9249fb27d37ca29452a0a094.jpg?1536303856#h",name:"新时代大学英语 视听说教程1",price:"￥48.45"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥48.45</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥57.00</del></li>
+            <li><label for="">节省：</label><span>￥8.55</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥48.45</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26883.html">新时代大学英语 视听说教程1</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26882.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/f7/7f/0a/04ae55e1e06935b6baceb181afd32aa740421f9f.jpg?1536303661#h" alt="新时代大学英语 长篇阅读1"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26621">
+            <input type="hidden" name="goods[product_id]" value="26882">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26621",img:"http://www.xinhuabest.com/public/images/f7/7f/0a/04ae55e1e06935b6baceb181afd32aa740421f9f.jpg?1536303661#h",name:"新时代大学英语 长篇阅读1",price:"￥41.65"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥41.65</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥49.00</del></li>
+            <li><label for="">节省：</label><span>￥7.35</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥41.65</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26882.html">新时代大学英语 长篇阅读1</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26881.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/55/67/68/bde7736dd63105db7e5d48421a78fb31691cf693.jpg?1536303452#h" alt="大学体育与健康教程 "></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26620">
+            <input type="hidden" name="goods[product_id]" value="26881">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26620",img:"http://www.xinhuabest.com/public/images/55/67/68/bde7736dd63105db7e5d48421a78fb31691cf693.jpg?1536303452#h",name:"大学体育与健康教程 ",price:"￥30.60"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥30.60</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥36.00</del></li>
+            <li><label for="">节省：</label><span>￥5.40</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥30.60</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26881.html">大学体育与健康教程 </a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+</ul>
+
+
 </div>
 </div>
 </div>
@@ -1760,42 +2033,42 @@
 
 <div class="grade_main gallery-sortbar" id='gallery_sortbar' style="display:none">
 <div class="grade_mains  gallery-show" id='gallery_show'>
-    <div class="gallery-list">
-        <input type="hidden" class="action-pagedata" value="{total:<{$total}>, pagecurrent:<{$page|default:1}>, pagetotal:<{$pagetotal}>}">
-        <{if empty($goodsData)}>
-        <ul>
-            <li style="width:100%; padding-bottom: 1%!important;">
-                <h1 style="font-size:18px; color: #666;text-align:center;margin:0 auto;display: none;" >非常抱歉，没有找到相关教辅</h1> <!---->
-            </li>
-        </ul>
-        <{else}>
-        <ul>
-            <{foreach from=$goodsData key=key item=goods}>
-            <li class="goods-item clearfix">
-                <div class="goods-pic">
-                    <{if $goods.products.promotion_type_name }>
-                    <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
-                    <{else}>
-                    <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
-                    <{/if}>
-                    <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
-                    <{foreach from=$goods.tags item=tags}>
-                    <{if $tags.params.tag_showOnIndex == 'on'}>
-                    <{if $tags.params.tag_image}>
-                    <span class="img-tag-<{$tags.params.pic_loc}>" style="opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><img src="<{$tags.params.tag_image|storager}>"></span>
-                    <{else}>
-                    <{/if}>
-                    <{/if}>
-                    <{/foreach}>
-                    <{/if}>
-                </div>
-                <div class="goods-action">
-                    <!--预售商品的显示判断-->
-                    <{if !isset($goods.prepare)}>
-                    <div class="goods-buy">
-                        <{if $goods.products.store > 0}>
-                        <!-- 加入购物车 -->
-                        <{if $env.conf.b2c.gallery.display.buynum == 'true'}>
+<div class="gallery-list">
+    <input type="hidden" class="action-pagedata" value="{total:<{$total}>, pagecurrent:<{$page|default:1}>, pagetotal:<{$pagetotal}>}">
+    <{if empty($goodsData)}>
+    <ul>
+        <li style="width:100%; padding-bottom: 1%!important;">
+            <h1 style="font-size:18px; color: #666;text-align:center;margin:0 auto;display: none;" >非常抱歉，没有找到相关教辅</h1> <!---->
+        </li>
+    </ul>
+    <{else}>
+    <ul  style="display: none;">
+        <{foreach from=$goodsData key=key item=goods}>
+        <li class="goods-item clearfix">
+            <div class="goods-pic">
+                <{if $goods.products.promotion_type_name }>
+                <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
+                <{else}>
+                <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
+                <{/if}>
+                <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
+                <{foreach from=$goods.tags item=tags}>
+                <{if $tags.params.tag_showOnIndex == 'on'}>
+                <{if $tags.params.tag_image}>
+                <span class="img-tag-<{$tags.params.pic_loc}>" style="opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><img src="<{$tags.params.tag_image|storager}>"></span>
+                <{else}>
+                <{/if}>
+                <{/if}>
+                <{/foreach}>
+                <{/if}>
+            </div>
+            <div class="goods-action">
+                <!--预售商品的显示判断-->
+                <{if !isset($goods.prepare)}>
+                <div class="goods-buy">
+                    <{if $goods.products.store > 0}>
+                    <!-- 加入购物车 -->
+                    <{if $env.conf.b2c.gallery.display.buynum == 'true'}>
           <span class="p-quantity">
             <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
             <input type="text" min="1" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
@@ -1818,146 +2091,148 @@
             <{/if}>
           </span>
 
-                        <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
-                        <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
-                        <{/if}>
-                        <{if $env.conf.b2c.site.buy.target == '2'}>
-                        <{assign var='buytarget' value='_blank_cart'}>
-                        <{elseif $env.conf.b2c.site.buy.target == '3'}>
-                        <{assign var='buytarget' value='_dialog_minicart'}>
-                        <{/if}>
+                    <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
+                    <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
+                    <{/if}>
+                    <{if $env.conf.b2c.site.buy.target == '2'}>
+                    <{assign var='buytarget' value='_blank_cart'}>
+                    <{elseif $env.conf.b2c.site.buy.target == '3'}>
+                    <{assign var='buytarget' value='_dialog_minicart'}>
+                    <{/if}>
 
-                        <a class="btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
-                        <{if $buytarget}> target="<{$buytarget}>"<{/if}>><span><span onclick="buy()">加入购物车</span></span>
-                        </a>
-                        <!--<a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
-                        <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
-                        </a>-->
-                        <{elseif $goods.spec_desc && $goods.store}>
-                        <a class="btn btn-caution" href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>查看详情</span></span></a>
-                        <{else}>
-                        <!-- 到货通知 -->
-                        <a href="javascript:void(0);" class="btn btn-caution action-notify" rel="<{$goods.goods_id}>::<{$goods.products.product_id}>"><span><span>到货通知</span></span></a>
-                        <{/if}>
-                    </div>
+                    <a class="btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                    <{if $buytarget}> target="<{$buytarget}>"<{/if}>><span><span onclick="buy()">加入购物车</span></span>
+                    </a>
+                    <!--<a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                    <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
+                    </a>-->
+                    <{elseif $goods.spec_desc && $goods.store}>
+                    <a class="btn btn-caution" href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>查看详情</span></span></a>
                     <{else}>
-                    <!--预售商品-->
-                    <div class="goods-buy">
+                    <!-- 到货通知 -->
+                    <a href="javascript:void(0);" class="btn btn-caution action-notify" rel="<{$goods.goods_id}>::<{$goods.products.product_id}>"><span><span>到货通知</span></span></a>
+                    <{/if}>
+                </div>
+                <{else}>
+                <!--预售商品-->
+                <div class="goods-buy">
 
-                        <!-- 加入购物车 -->
+                    <!-- 加入购物车 -->
           <span class="p-quantity">
             <input type="text" min="1" readonly="true" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
 
           </span>
-                        <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
-                        <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
+                    <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
+                    <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
 
 
-                        <a class="btn btn-major"  href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>立即预定</span></span></a>
+                    <a class="btn btn-major"  href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>立即预定</span></span></a>
 
-                    </div>
+                </div>
+                <{/if}>
+
+                <div class="goods-others">
+                    <{if $login=='nologin'}>
+                    <a href="<{link app=b2c ctl=site_passport act=login}>" class="btn btn-simple"><span><span>收藏</span></span></a>
+                    <{else}>
+                    <{if !$goods.is_fav}>
+                    <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>"><span><span>收藏</span></span></button>
+                    <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+                    <{else}>
+                    <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>" style="display:none;"><span><span>收藏</span></span></button>
+                    <button type="button" class="btn btn-plane" rev="_favbtn_"><span><span>已收藏</span></span></button>
                     <{/if}>
-
-                    <div class="goods-others">
-                        <{if $login=='nologin'}>
-                        <a href="<{link app=b2c ctl=site_passport act=login}>" class="btn btn-simple"><span><span>收藏</span></span></a>
-                        <{else}>
-                        <{if !$goods.is_fav}>
-                        <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>"><span><span>收藏</span></span></button>
-                        <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
-                        <{else}>
-                        <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>" style="display:none;"><span><span>收藏</span></span></button>
-                        <button type="button" class="btn btn-plane" rev="_favbtn_"><span><span>已收藏</span></span></button>
-                        <{/if}>
-                        <{/if}>
-                        <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"<{$goods.type_id}>",goods_id:"<{$goods.goods_id}>",img:"<{$goods.image_default_id|storager:'s'}>",name:"<{$goods.name|strip_tags}>",price:"<{$goods.products.price|cur_odr}>"}'><span><span>对比</span></span></button>
-                    </div>
+                    <{/if}>
+                    <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"<{$goods.type_id}>",goods_id:"<{$goods.goods_id}>",img:"<{$goods.image_default_id|storager:'s'}>",name:"<{$goods.name|strip_tags}>",price:"<{$goods.products.price|cur_odr}>"}'><span><span>对比</span></span></button>
                 </div>
-                <div class="goods-price">
-                    <ul>
+            </div>
+            <div class="goods-price">
+                <ul>
 
-                        <li><label for="">销售价：</label><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
-                        <{if $env.conf.b2c.site.show_mark_price == 'true'}>
-                        <li><label for="">市场价：</label><del class="price"><{$goods.products.mktprice|cur_odr}></del></li>
-                        <{if $env.conf.b2c.site.save_price == '1'}>
-                        <li><label for="">节省：</label><span><{$goods.products.mktprice-$goods.products.price|cur_odr}></span></li>
-                        <{elseif $env.conf.b2c.site.save_price == '2'}>
-                        <li><label for="">优惠：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'2'}>%</span></li>
-                        <{elseif $env.conf.b2c.site.save_price == '3'}>
-                        <li><label for="">折扣：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'1'}><{t}>折<{/t}></span></li>
+                    <li><label for="">销售价：</label><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
+                    <{if $env.conf.b2c.site.show_mark_price == 'true'}>
+                    <li><label for="">市场价：</label><del class="price"><{$goods.products.mktprice|cur_odr}></del></li>
+                    <{if $env.conf.b2c.site.save_price == '1'}>
+                    <li><label for="">节省：</label><span><{$goods.products.mktprice-$goods.products.price|cur_odr}></span></li>
+                    <{elseif $env.conf.b2c.site.save_price == '2'}>
+                    <li><label for="">优惠：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'2'}>%</span></li>
+                    <{elseif $env.conf.b2c.site.save_price == '3'}>
+                    <li><label for="">折扣：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'1'}><{t}>折<{/t}></span></li>
+                    <{/if}>
+                    <{/if}>
+                </ul>
+            </div>
+
+            <div class="m_goods-price">
+                <ul>
+
+                    <li><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
+                    <{if $env.conf.b2c.site.show_mark_price == 'true'}>
+                    <{/if}>
+                </ul>
+            </div>
+
+
+            <div class="goods-info">
+                <!--预售商品的显示判断-->
+                <{if !isset($goods.prepare)}>
+                <{if $goods.products.promotion_type_name }>
+                <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=starbuy ctl=site_team act=index arg0=$goods.products.product_id arg1=$goods.products.promotion_type_id}>"><{$goods.name}></a>
+                    <{else}>
+                    <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>
                         <{/if}>
-                        <{/if}>
-                    </ul>
-                </div>
-
-                <div class="m_goods-price">
-                    <ul>
-
-                        <li><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
-                        <{if $env.conf.b2c.site.show_mark_price == 'true'}>
-                        <{/if}>
-                    </ul>
-                </div>
-
-
-                <div class="goods-info">
-                    <!--预售商品的显示判断-->
-                    <{if !isset($goods.prepare)}>
-                    <{if $goods.products.promotion_type_name }>
-                    <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=starbuy ctl=site_team act=index arg0=$goods.products.product_id arg1=$goods.products.promotion_type_id}>"><{$goods.name}></a>
                         <{else}>
-                        <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>
+                        <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>&nbsp;<span style="color:#fff;background:red;font-weight:bold;">预售</span>
+                            <{/if}>
+
+                            <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
+                            <{foreach from=$goods.tags item=tags}>
+                            <{if $tags.params.tag_showOnIndex == 'on'}>
+                            <span class="text-tag-<{$tags.params.pic_loc}>" style="background-color:<{$tags.tag_bgcolor|default:'transparent'}>;color:<{$tags.tag_fgcolor}>;opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><{$tags.tag_name}></span>
+                            <{/if}>
+                            <{/foreach}>
+                            <{/if}>
+                        </h3>
+                        <a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                        <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
+                        </a>
+                        <div class="goods-desc"><{$goods.brief}></div>
+                        <div class="goods-comment">
+                            <{if $point_status == 'on'}>
+                            <{if $goods.comments_count > 0}>
+                            <em class="stars stars-<{$goods.goods_point.avg_num*10}>">
+                                <span class="below"><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i></span><span class="above"><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i></span>
+                            </em>
+                            <{if $commentListListnum=='true'}>
+                            <a href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>#product_comment"><b><{$goods.comments_count}></b><{t}>条评论<{/t}></a>
                             <{/if}>
                             <{else}>
-                            <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>&nbsp;<span style="color:#fff;background:red;font-weight:bold;">预售</span>
-                                <{/if}>
+                            <{if $commentListListnum=='true'}>
+                            <{t}>暂无评论<{/t}>
+                            <{/if}>
+                            <{/if}>
+                            <{/if}>
+                        </div>
+                        <div class="promotion-tags">
+                            <{if $goods.promotion_tags && $env.conf.b2c.gallery.display.promotion == 'true'}>
+                            <{foreach from=$goods.promotion_tags item=pTag}>
+                            <span class="tag"><{$pTag.tag_name}></span>
+                            <{/foreach}>
+                            <{/if}>
 
-                                <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
-                                <{foreach from=$goods.tags item=tags}>
-                                <{if $tags.params.tag_showOnIndex == 'on'}>
-                                <span class="text-tag-<{$tags.params.pic_loc}>" style="background-color:<{$tags.tag_bgcolor|default:'transparent'}>;color:<{$tags.tag_fgcolor}>;opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><{$tags.tag_name}></span>
-                                <{/if}>
-                                <{/foreach}>
-                                <{/if}>
-                            </h3>
-                            <a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
-                            <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
-                            </a>
-                            <div class="goods-desc"><{$goods.brief}></div>
-                            <div class="goods-comment">
-                                <{if $point_status == 'on'}>
-                                <{if $goods.comments_count > 0}>
-                                <em class="stars stars-<{$goods.goods_point.avg_num*10}>">
-                                    <span class="below"><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i></span><span class="above"><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i></span>
-                                </em>
-                                <{if $commentListListnum=='true'}>
-                                <a href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>#product_comment"><b><{$goods.comments_count}></b><{t}>条评论<{/t}></a>
-                                <{/if}>
-                                <{else}>
-                                <{if $commentListListnum=='true'}>
-                                <{t}>暂无评论<{/t}>
-                                <{/if}>
-                                <{/if}>
-                                <{/if}>
-                            </div>
-                            <div class="promotion-tags">
-                                <{if $goods.promotion_tags && $env.conf.b2c.gallery.display.promotion == 'true'}>
-                                <{foreach from=$goods.promotion_tags item=pTag}>
-                                <span class="tag"><{$pTag.tag_name}></span>
-                                <{/foreach}>
-                                <{/if}>
+                            <{if $goods.products.promotion_type_name }>
+                            <span class="tag"><{$goods.products.promotion_type_name}></span>
+                            <{/if}>
+                        </div>
+            </div>
+        </li>
+        <{/foreach}>
+    </ul>
 
-                                <{if $goods.products.promotion_type_name }>
-                                <span class="tag"><{$goods.products.promotion_type_name}></span>
-                                <{/if}>
-                            </div>
-                </div>
-            </li>
-            <{/foreach}>
-        </ul>
-        <{/if}>
-    </div>
-    <{pagers data=$pager}>
+
+    <{/if}>
+</div>
+<{pagers data=$pager}>
 
 </div>
 </div>
@@ -2348,27 +2623,36 @@
 
 <script type="text/javascript">
     jQuery(function(){
-        var s_province=jQuery.cookie('s_province');
-//        if(!s_province){
-//            s_province = '石家庄市';
-//        }
-        var s_city=jQuery.cookie('s_city');
-//                if(!s_city){
-//                    s_city = '桥西区';
-//        }
-
-        var s_county=jQuery.cookie('s_county');
-//                if(!s_county){
-//                    s_county = '草场街小学';
-//        }
-
-        var s_grade=jQuery.cookie('s_grade');
-//                if(!s_grade){
-//                    s_grade = '九年级';
-//        }
-
+        var s_province=jQuery.cookie('s_province');//alert(s_province);
+        /*
+         if(typeof(s_province) == "undefined"){
+         //alert("undefined");
+         s_province = '张家口市';
+         }
+         */
+        var s_city=jQuery.cookie('s_city');//alert(s_city);
+        /*
+         if(typeof(s_city) == "undefined"){
+         s_city = '桥西区';//alert(s_city);
+         }
+         */
+        var s_county=jQuery.cookie('s_county');//alert(s_city);
+        /*
+         if(typeof(s_county) == "undefined"){
+         s_county = '张家口学院';
+         }
+         */
+        var s_grade=jQuery.cookie('s_grade');//alert(s_grade);
+        /*
+         if(typeof(s_grade) == "undefined"){
+         s_grade = '大一';
+         }
+         */
         var s_class=jQuery.cookie('s_class');
         //位置
+
+
+
         var mywz='';
         if(s_province){
             mywz+=s_province;
@@ -2382,9 +2666,10 @@
         if(s_grade){
             mywz+=">"+s_grade;
         }
-        if(s_class){
-            mywz+=">"+s_class;
-        }
+        //if(s_class){
+        //    mywz+=">"+s_class;
+        // }
+        //return false;
         jQuery("#dqwz").html(mywz);
         jQuery("#dqwz2").html(mywz);
         jQuery("#dqwz3").html(mywz);
@@ -2407,7 +2692,7 @@
             jQuery("#s_grade").val(s_grade);
 
         }
-        if(s_class){
+        if(s_class){ //更改了上下册
             jQuery("#m_s_class").val(s_class);
             jQuery("#s_class").val(s_class);
         }
@@ -3254,7 +3539,7 @@ function inputCheck(input, options) {
          </div>
      </div>-->
         <div class="title" style="padding-top:80px"><img style="width:50%; display:block; margin:0 auto" src="<{$env.app.res_url}>/css/new/images/title.png" /></div>
-        <div class="position_else">
+        <div class="position_else" style="display: none">
             <div class="position_name" style="font-size:30px">已选：</div>
             <div class="posi_location" id="dqwz3" style="font-size:30px"></div>
             <!-- <div class="ghqy_new">更换区域</div>-->
