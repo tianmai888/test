@@ -194,7 +194,7 @@
 <div class="title"><img src="<{$env.app.res_url}>/css/new/images/title.png" /></div>
 
 <!---0323--->
-<div class="position_else">
+<div class="position_else" style="display: none">
     <div class="position_name">已选：</div>
     <div class="posi_location" id="dqwz"></div>
     <a class="ghqy_new">更换区域</a>
@@ -419,7 +419,7 @@
 
 </div>
 <!--0323-->
-<div class="m_position_else"><!--手机端已选-->
+<div class="m_position_else" style="display: none"><!--手机端已选-->
     <div class="position_name">已选：</div>
     <div class="posi_location" id="dqwz2"></div>
 </div>
@@ -535,7 +535,7 @@
             if(s_province=='选择地市'||s_city=='选择区县'||s_county=='填写学校'||s_grade=='选择年级'||s_class=='选择班级'){
                 alert('请选择您的班级');
             }else{
-                jQuery.cookie('s_province', s_province);
+                jQuery.cookie('s_province', s_province);//alert('123');
                 jQuery.cookie('s_city', s_city);
                 jQuery.cookie('s_county', s_county);
                 jQuery.cookie('s_grade', s_grade);
@@ -691,10 +691,3137 @@
 <!-----------年级内容------------->
 
 <!---新添加的六本指定图书begin-->
-<div class="grade_main gallery-sortbar" style="display: none;">
+<div class="grade_main gallery-sortbar" >
 <div class="grade_mains  gallery-show">
 <div class="gallery-list">
 <input type="hidden" class="action-pagedata" value="{total:<{$total}>, pagecurrent:<{$page|default:1}>, pagetotal:<{$pagetotal}>}">
+
+<ul style="display: none">
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26884.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/98/6d/26/b959f6971c2d446f6073894ec65850d2f20e14fe.jpg?1536310634#h" alt="21世纪职业教育行业英语 冬奥会项目英语"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26623">
+            <input type="hidden" name="goods[product_id]" value="26884">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26623",img:"http://www.xinhuabest.com/public/images/98/6d/26/b959f6971c2d446f6073894ec65850d2f20e14fe.jpg?1536310634#h",name:"21世纪职业教育行业英语 冬奥会项目英语",price:"￥35.70"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥35.70</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥42.00</del></li>
+            <li><label for="">节省：</label><span>￥6.30</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥35.70</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26884.html">21世纪职业教育行业英语 冬奥会项目英语</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26883.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/72/e2/b3/52400e637ce726fd9249fb27d37ca29452a0a094.jpg?1536303856#h" alt="新时代大学英语 视听说教程1"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26622">
+            <input type="hidden" name="goods[product_id]" value="26883">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26622",img:"http://www.xinhuabest.com/public/images/72/e2/b3/52400e637ce726fd9249fb27d37ca29452a0a094.jpg?1536303856#h",name:"新时代大学英语 视听说教程1",price:"￥48.45"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥48.45</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥57.00</del></li>
+            <li><label for="">节省：</label><span>￥8.55</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥48.45</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26883.html">新时代大学英语 视听说教程1</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26882.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/f7/7f/0a/04ae55e1e06935b6baceb181afd32aa740421f9f.jpg?1536303661#h" alt="新时代大学英语 长篇阅读1"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26621">
+            <input type="hidden" name="goods[product_id]" value="26882">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26621",img:"http://www.xinhuabest.com/public/images/f7/7f/0a/04ae55e1e06935b6baceb181afd32aa740421f9f.jpg?1536303661#h",name:"新时代大学英语 长篇阅读1",price:"￥41.65"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥41.65</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥49.00</del></li>
+            <li><label for="">节省：</label><span>￥7.35</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥41.65</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26882.html">新时代大学英语 长篇阅读1</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26881.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/55/67/68/bde7736dd63105db7e5d48421a78fb31691cf693.jpg?1536303452#h" alt="大学体育与健康教程 "></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26620">
+            <input type="hidden" name="goods[product_id]" value="26881">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26620",img:"http://www.xinhuabest.com/public/images/55/67/68/bde7736dd63105db7e5d48421a78fb31691cf693.jpg?1536303452#h",name:"大学体育与健康教程 ",price:"￥30.60"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥30.60</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥36.00</del></li>
+            <li><label for="">节省：</label><span>￥5.40</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥30.60</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26881.html">大学体育与健康教程 </a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+</ul>
+<!--20180803 edit by zhang 如果想改回来，直接删掉下边的<ul></ul>即可-->
+<ul style="display: none">
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html"><img class="action-goods-img" alt="五年中考三年模拟 初中英语 七年级上册 人教版 2019版初中同步" src="http://www.xinhuabest.com/public/images/01/9c/be/5d544af81eb8cb555bd93fb3cf91d215991cdf19.jpg?1533518934#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+             <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+            </span>
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html"><span><span >立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥29.90</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥29.90</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥29.90</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html">五年中考三年模拟 初中英语 七年级上册 人教版 2019版初中同步</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html"><img class="action-goods-img" alt="星星离我们有多远" src="http://www.xinhuabest.com/public/images/4a/af/2b/108e8c53cd059512481043ed05fc9285f66bc3c7.jpg?1533690729#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥32.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥32.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥32.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html">星星离我们有多远</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html"><img class="action-goods-img" alt="城南旧事 七年级上" src="http://www.xinhuabest.com/public/images/37/ce/b5/86e1eaa55b611e5f93cbe33fe05f9fe15ade96bf.jpg?1533691038#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥24.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥24.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥24.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html">城南旧事 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html"><img class="action-goods-img" alt="学生字典（单色插图本)" src="http://www.xinhuabest.com/public/images/7f/fb/a7/f16faded6508e413f58b10a18586393fcf40e39f.jpg?1501641546#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥16.73</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥16.73</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥16.73</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html">学生字典（单色插图本)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html"><img class="action-goods-img" alt="新华字典(第11版大字本)" src="http://www.xinhuabest.com/public/images/b1/2f/1b/bce1ff4e42fe6effa9388bcc34ea66b9737a7751.jpg?1474956924#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥42.72</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥42.72</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥42.72</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html">新华字典(第11版大字本)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html"><img class="action-goods-img" alt="湘行散记 七年级上" src="http://www.xinhuabest.com/public/images/45/17/26/2a5966dc77304e7bd9425f4e9f9d9020ef2acfeb.jpg?1533691359#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥22.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥22.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥22.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html">湘行散记 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html"><img class="action-goods-img" alt="现代汉语字典（彩色插图本）" src="http://www.xinhuabest.com/public/images/4d/1b/92/3527d5625a878804715ab03b195d6cc75ac8fad1.jpg?1533692625#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥78.32</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥78.32</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥78.32</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html">现代汉语字典（彩色插图本）</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html"><img class="action-goods-img" alt="朝花夕拾 七年级上" src="http://www.xinhuabest.com/public/images/4e/8c/64/2ab2a743167bf6fd77b87e8ff4734550428c9a2e.jpg?1533691653#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥22.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥22.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥22.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html">朝花夕拾 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html"><img class="action-goods-img" alt="现代汉语词典(第6版)(精)" src="http://www.xinhuabest.com/public/images/fd/78/06/055ae5deefbc8bc76552e08eefdc5da0a49559e1.jpg?1456399247#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥84.55</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥84.55</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥84.55</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html">现代汉语词典(第6版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html"><img class="action-goods-img" alt="小学生多功能组词造句搭配词典(新课标学生专用辞书彩图版)(精)" src="http://www.xinhuabest.com/public/images/01/f3/90/31e8ef97f3a4982bc60b4d3e03f8311a1854f6a2.jpg?1474622857#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥26.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥26.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥26.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html">小学生多功能组词造句搭配词典(新课标学生专用辞书彩图版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html"><img class="action-goods-img" alt="昆虫记 八年级上" src="http://www.xinhuabest.com/public/images/b9/f9/4e/f82d91006486efdbc152eea95eb62adf41c0934a.jpg?1533690068#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥34.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥34.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥34.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html">昆虫记 八年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html"><img class="action-goods-img" alt="现代汉语词典(第7版)(精)" src="http://www.xinhuabest.com/public/images/e8/0c/0e/9e7495a8bf32e29f2293f10c5f194bd1f33fcf9c.jpg?1533693113#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥109.00</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥109.00</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥109.00</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html">现代汉语词典(第7版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html"><img class="action-goods-img" alt="寂静的春天 八年级上" src="http://www.xinhuabest.com/public/images/9d/78/a5/e88f79f0d50a8e9053adf0ad036bd37cb4dbbc94.jpg?1533689712#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥29.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥29.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥29.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html">寂静的春天 八年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html"><img class="action-goods-img" alt="猎人笔记 七年级上" src="http://www.xinhuabest.com/public/images/ba/50/93/835718d9be72ff3618fe5046d1ba0fc71c1bcb44.jpg?1533629508#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥38.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥38.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥38.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html">猎人笔记 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html"><img class="action-goods-img" alt="汉语成语大词典(修订版)(精)" src="http://www.xinhuabest.com/public/images/02/4d/04/0755b25e1819f147c161b53f9373d1f4cd22ead6.jpg?1533693423#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥55.00</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥55.00</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥55.00</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html">汉语成语大词典(修订版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html"><img class="action-goods-img" alt="西游记（上下册）七年级上" src="http://www.xinhuabest.com/public/images/5e/f2/bb/daefd5b5d61e2df6872a382ee74532bd2bce954f.jpg?1533629121#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥65.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥65.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥65.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html">西游记（上下册）七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html"><img class="action-goods-img" alt="镜花缘 七年级上" src="http://www.xinhuabest.com/public/images/15/a8/15/f94d2b1d626e1366dc2882ed9ec0597e12ac845b.jpg?1533628579#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥58.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥58.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥58.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html">镜花缘 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix"  style="display: none;">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html"><img class="action-goods-img" alt="海底两万里 七年级下" src="http://www.xinhuabest.com/public/images/80/a1/7d/6d9dbe580a901c902956b498f13d321f4f9b2d25.jpg?1533628209#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥38.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥38.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥38.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html">海底两万里 七年级下</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html"><img class="action-goods-img" alt="小学生多功能同义词近义词反义词词典(新课标学生专用辞书彩图)" src="http://www.xinhuabest.com/public/images/dd/cd/02/000094147d95cf77d202d5d78a9f05433118b9e6.jpg?1474622582#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥26.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥26.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥26.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html">小学生多功能同义词近义词反义词词典(新课标学生专用辞书彩图)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html"><img class="action-goods-img" alt="骆驼祥子 七年级下" src="http://www.xinhuabest.com/public/images/f1/07/67/d6753dc8ae13b590a9cab78531a0789aded3a87b.jpg?1533627663#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥28.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥28.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥28.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html">骆驼祥子 七年级下</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html"><img class="action-goods-img" alt="成语大词典(单色本最新修订版)(精)" src="http://www.xinhuabest.com/public/images/34/e4/9e/8299766884b898179e83cbf37655865cc8f03378.jpg?1470906272#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥60.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥60.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥60.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html">成语大词典(单色本最新修订版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+
+</ul>
+
+</div>
+</div>
+</div>
+
+<!---新添加的六本指定图书end-->
+
+
+<div class="grade_main gallery-sortbar" id='gallery_sortbar' style="display:none">
+<div class="grade_mains  gallery-show" id='gallery_show'>
+<div class="gallery-list">
+<input type="hidden" class="action-pagedata" value="{total:<{$total}>, pagecurrent:<{$page|default:1}>, pagetotal:<{$pagetotal}>}">
+<{if empty($goodsData)}>
+<ul>
+    <li style="width:100%; padding-bottom: 1%!important;">
+        <h1 style="font-size:18px; color: #666;text-align:center;margin:0 auto;display: none;" >非常抱歉，没有找到相关教辅</h1> <!---->
+    </li>
+</ul>
+<ul>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26884.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/98/6d/26/b959f6971c2d446f6073894ec65850d2f20e14fe.jpg?1536310634#h" alt="21世纪职业教育行业英语 冬奥会项目英语"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26623">
+            <input type="hidden" name="goods[product_id]" value="26884">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26623",img:"http://www.xinhuabest.com/public/images/98/6d/26/b959f6971c2d446f6073894ec65850d2f20e14fe.jpg?1536310634#h",name:"21世纪职业教育行业英语 冬奥会项目英语",price:"￥35.70"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥35.70</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥42.00</del></li>
+            <li><label for="">节省：</label><span>￥6.30</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥35.70</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26884.html">21世纪职业教育行业英语 冬奥会项目英语</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26883.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/72/e2/b3/52400e637ce726fd9249fb27d37ca29452a0a094.jpg?1536303856#h" alt="新时代大学英语 视听说教程1"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26622">
+            <input type="hidden" name="goods[product_id]" value="26883">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26622",img:"http://www.xinhuabest.com/public/images/72/e2/b3/52400e637ce726fd9249fb27d37ca29452a0a094.jpg?1536303856#h",name:"新时代大学英语 视听说教程1",price:"￥48.45"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥48.45</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥57.00</del></li>
+            <li><label for="">节省：</label><span>￥8.55</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥48.45</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26883.html">新时代大学英语 视听说教程1</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26882.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/f7/7f/0a/04ae55e1e06935b6baceb181afd32aa740421f9f.jpg?1536303661#h" alt="新时代大学英语 长篇阅读1"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26621">
+            <input type="hidden" name="goods[product_id]" value="26882">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26621",img:"http://www.xinhuabest.com/public/images/f7/7f/0a/04ae55e1e06935b6baceb181afd32aa740421f9f.jpg?1536303661#h",name:"新时代大学英语 长篇阅读1",price:"￥41.65"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥41.65</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥49.00</del></li>
+            <li><label for="">节省：</label><span>￥7.35</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥41.65</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26882.html">新时代大学英语 长篇阅读1</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26881.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/55/67/68/bde7736dd63105db7e5d48421a78fb31691cf693.jpg?1536303452#h" alt="大学体育与健康教程 "></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26620">
+            <input type="hidden" name="goods[product_id]" value="26881">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26620",img:"http://www.xinhuabest.com/public/images/55/67/68/bde7736dd63105db7e5d48421a78fb31691cf693.jpg?1536303452#h",name:"大学体育与健康教程 ",price:"￥30.60"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥30.60</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥36.00</del></li>
+            <li><label for="">节省：</label><span>￥5.40</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥30.60</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26881.html">大学体育与健康教程 </a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+</ul>
+
+<ul >
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html"><img class="action-goods-img" alt="五年中考三年模拟 初中英语 七年级上册 人教版 2019版初中同步" src="http://www.xinhuabest.com/public/images/01/9c/be/5d544af81eb8cb555bd93fb3cf91d215991cdf19.jpg?1533518934#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+             <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+            </span>
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html"><span><span >立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥29.90</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥29.90</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥29.90</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26436.html">五年中考三年模拟 初中英语 七年级上册 人教版 2019版初中同步</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html"><img class="action-goods-img" alt="星星离我们有多远" src="http://www.xinhuabest.com/public/images/4a/af/2b/108e8c53cd059512481043ed05fc9285f66bc3c7.jpg?1533690729#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥32.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥32.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥32.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26445.html">星星离我们有多远</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html"><img class="action-goods-img" alt="城南旧事 七年级上" src="http://www.xinhuabest.com/public/images/37/ce/b5/86e1eaa55b611e5f93cbe33fe05f9fe15ade96bf.jpg?1533691038#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥24.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥24.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥24.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26446.html">城南旧事 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html"><img class="action-goods-img" alt="学生字典（单色插图本)" src="http://www.xinhuabest.com/public/images/7f/fb/a7/f16faded6508e413f58b10a18586393fcf40e39f.jpg?1501641546#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥16.73</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥16.73</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥16.73</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-24085.html">学生字典（单色插图本)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html"><img class="action-goods-img" alt="新华字典(第11版大字本)" src="http://www.xinhuabest.com/public/images/b1/2f/1b/bce1ff4e42fe6effa9388bcc34ea66b9737a7751.jpg?1474956924#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥42.72</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥42.72</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥42.72</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-1006.html">新华字典(第11版大字本)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html"><img class="action-goods-img" alt="湘行散记 七年级上" src="http://www.xinhuabest.com/public/images/45/17/26/2a5966dc77304e7bd9425f4e9f9d9020ef2acfeb.jpg?1533691359#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥22.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥22.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥22.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26447.html">湘行散记 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html"><img class="action-goods-img" alt="现代汉语字典（彩色插图本）" src="http://www.xinhuabest.com/public/images/4d/1b/92/3527d5625a878804715ab03b195d6cc75ac8fad1.jpg?1533692625#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥78.32</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥78.32</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥78.32</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-6661.html">现代汉语字典（彩色插图本）</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html"><img class="action-goods-img" alt="朝花夕拾 七年级上" src="http://www.xinhuabest.com/public/images/4e/8c/64/2ab2a743167bf6fd77b87e8ff4734550428c9a2e.jpg?1533691653#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥22.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥22.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥22.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26448.html">朝花夕拾 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html"><img class="action-goods-img" alt="现代汉语词典(第6版)(精)" src="http://www.xinhuabest.com/public/images/fd/78/06/055ae5deefbc8bc76552e08eefdc5da0a49559e1.jpg?1456399247#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥84.55</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥84.55</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥84.55</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-1008.html">现代汉语词典(第6版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html"><img class="action-goods-img" alt="小学生多功能组词造句搭配词典(新课标学生专用辞书彩图版)(精)" src="http://www.xinhuabest.com/public/images/01/f3/90/31e8ef97f3a4982bc60b4d3e03f8311a1854f6a2.jpg?1474622857#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥26.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥26.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥26.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-20564.html">小学生多功能组词造句搭配词典(新课标学生专用辞书彩图版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html"><img class="action-goods-img" alt="昆虫记 八年级上" src="http://www.xinhuabest.com/public/images/b9/f9/4e/f82d91006486efdbc152eea95eb62adf41c0934a.jpg?1533690068#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥34.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥34.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥34.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26444.html">昆虫记 八年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html"><img class="action-goods-img" alt="现代汉语词典(第7版)(精)" src="http://www.xinhuabest.com/public/images/e8/0c/0e/9e7495a8bf32e29f2293f10c5f194bd1f33fcf9c.jpg?1533693113#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥109.00</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥109.00</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥109.00</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-25239.html">现代汉语词典(第7版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html"><img class="action-goods-img" alt="寂静的春天 八年级上" src="http://www.xinhuabest.com/public/images/9d/78/a5/e88f79f0d50a8e9053adf0ad036bd37cb4dbbc94.jpg?1533689712#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥29.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥29.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥29.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26443.html">寂静的春天 八年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html"><img class="action-goods-img" alt="猎人笔记 七年级上" src="http://www.xinhuabest.com/public/images/ba/50/93/835718d9be72ff3618fe5046d1ba0fc71c1bcb44.jpg?1533629508#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥38.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥38.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥38.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26442.html">猎人笔记 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html"><img class="action-goods-img" alt="汉语成语大词典(修订版)(精)" src="http://www.xinhuabest.com/public/images/02/4d/04/0755b25e1819f147c161b53f9373d1f4cd22ead6.jpg?1533693423#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥55.00</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥55.00</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥55.00</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-25912.html">汉语成语大词典(修订版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html"><img class="action-goods-img" alt="西游记（上下册）七年级上" src="http://www.xinhuabest.com/public/images/5e/f2/bb/daefd5b5d61e2df6872a382ee74532bd2bce954f.jpg?1533629121#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥65.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥65.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥65.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26441.html">西游记（上下册）七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html"><img class="action-goods-img" alt="镜花缘 七年级上" src="http://www.xinhuabest.com/public/images/15/a8/15/f94d2b1d626e1366dc2882ed9ec0597e12ac845b.jpg?1533628579#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥58.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥58.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥58.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26440.html">镜花缘 七年级上</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix"  style="display: none;">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html"><img class="action-goods-img" alt="海底两万里 七年级下" src="http://www.xinhuabest.com/public/images/80/a1/7d/6d9dbe580a901c902956b498f13d321f4f9b2d25.jpg?1533628209#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥38.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥38.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥38.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26439.html">海底两万里 七年级下</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html"><img class="action-goods-img" alt="小学生多功能同义词近义词反义词词典(新课标学生专用辞书彩图)" src="http://www.xinhuabest.com/public/images/dd/cd/02/000094147d95cf77d202d5d78a9f05433118b9e6.jpg?1474622582#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥26.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥26.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥26.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-20563.html">小学生多功能同义词近义词反义词词典(新课标学生专用辞书彩图)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html"><img class="action-goods-img" alt="骆驼祥子 七年级下" src="http://www.xinhuabest.com/public/images/f1/07/67/d6753dc8ae13b590a9cab78531a0789aded3a87b.jpg?1533627663#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥28.80</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥28.80</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥28.80</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-26438.html">骆驼祥子 七年级下</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a target="_blank" href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html"><img class="action-goods-img" alt="成语大词典(单色本最新修订版)(精)" src="http://www.xinhuabest.com/public/images/34/e4/9e/8299766884b898179e83cbf37655865cc8f03378.jpg?1470906272#h"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                                      <span class="p-quantity" style="display: none;">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="25535">
+            <input type="hidden" name="goods[product_id]" value="25790">
+            <a class="btn btn-major action-addtocart" href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html" ><span><span>立即购买</span></span>
+            </a>
+        </div>
+        <div class="goods-others">
+            <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="25283"><span><span>收藏</span></span></button>
+            <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+            <button type="button" class="btn btn-simple action-compare" data-compare="{type_id:&quot;16&quot;,goods_id:&quot;25790&quot;,img:&quot;http://www.xinhuabest.com/public/images/30/13/d7/ef7c05a6bbda0def29d6d1572d87d40fa9a6f504.jpg?1522028450#h&quot;,name:&quot;18春数学、物理、英语中考精确制导（套装）&quot;,price:&quot;￥65.60&quot;}"><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+            <li><label for="">销售价：</label><ins class="price">￥60.52</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥60.52</del></li>
+            <li><label for="">节省：</label><span>￥0.00</span></li>
+        </ul>
+    </div>
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥60.52</ins></li>
+        </ul>
+    </div>
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a href="http://www.xinhuabest.com/index.php/<{$wap}>product-19384.html">成语大词典(单色本最新修订版)(精)</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-25283-25538-1.html" target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+
+
+</ul>
+
+<{else}>
+<ul >
+    <{foreach from=$goodsData key=key item=goods}>
+    <li class="goods-item clearfix">
+        <div class="goods-pic">
+            <{if $goods.products.promotion_type_name }>
+            <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
+            <{else}>
+            <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
+            <{/if}>
+            <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
+            <{foreach from=$goods.tags item=tags}>
+            <{if $tags.params.tag_showOnIndex == 'on'}>
+            <{if $tags.params.tag_image}>
+            <span class="img-tag-<{$tags.params.pic_loc}>" style="opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><img src="<{$tags.params.tag_image|storager}>"></span>
+            <{else}>
+            <{/if}>
+            <{/if}>
+            <{/foreach}>
+            <{/if}>
+        </div>
+        <div class="goods-action">
+            <!--预售商品的显示判断-->
+            <{if !isset($goods.prepare)}>
+            <div class="goods-buy">
+                <{if $goods.products.store > 0}>
+                <!-- 加入购物车 -->
+                <{if $env.conf.b2c.gallery.display.buynum == 'true'}>
+          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+            <{if $env.conf.b2c.gallery.display.store_status == 'true'}>
+            <{if $goods.products.store <= $env.conf.b2c.gallery.store_status.num}>
+            <span class="store-warn"><{t}>库存紧张<{/t}></span>
+            <{/if}>
+            <{/if}>
+          </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+            <{if $env.conf.b2c.gallery.display.store_status == 'true'}>
+            <{if $goods.products.store <= $env.conf.b2c.gallery.store_status.num}>
+            <span class="store-warn"><{t}>库存紧张<{/t}></span>
+            <{/if}>
+            <{/if}>
+          </span>
+
+                <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
+                <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
+                <{/if}>
+                <{if $env.conf.b2c.site.buy.target == '2'}>
+                <{assign var='buytarget' value='_blank_cart'}>
+                <{elseif $env.conf.b2c.site.buy.target == '3'}>
+                <{assign var='buytarget' value='_dialog_minicart'}>
+                <{/if}>
+
+                <a class="btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                <{if $buytarget}> target="<{$buytarget}>"<{/if}>><span><span onclick="buy()">加入购物车</span></span>
+                </a>
+                <!--<a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
+                </a>-->
+                <{elseif $goods.spec_desc && $goods.store}>
+                <a class="btn btn-caution" href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>查看详情</span></span></a>
+                <{else}>
+                <!-- 到货通知 -->
+                <a href="javascript:void(0);" class="btn btn-caution action-notify" rel="<{$goods.goods_id}>::<{$goods.products.product_id}>"><span><span>到货通知</span></span></a>
+                <{/if}>
+            </div>
+            <{else}>
+            <!--预售商品-->
+            <div class="goods-buy">
+
+                <!-- 加入购物车 -->
+          <span class="p-quantity">
+            <input type="text" min="1" readonly="true" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
+
+          </span>
+                <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
+                <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
+
+
+                <a class="btn btn-major"  href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>立即预定</span></span></a>
+
+            </div>
+            <{/if}>
+
+            <div class="goods-others">
+                <{if $login=='nologin'}>
+                <a href="<{link app=b2c ctl=site_passport act=login}>" class="btn btn-simple"><span><span>收藏</span></span></a>
+                <{else}>
+                <{if !$goods.is_fav}>
+                <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>"><span><span>收藏</span></span></button>
+                <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
+                <{else}>
+                <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>" style="display:none;"><span><span>收藏</span></span></button>
+                <button type="button" class="btn btn-plane" rev="_favbtn_"><span><span>已收藏</span></span></button>
+                <{/if}>
+                <{/if}>
+                <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"<{$goods.type_id}>",goods_id:"<{$goods.goods_id}>",img:"<{$goods.image_default_id|storager:'s'}>",name:"<{$goods.name|strip_tags}>",price:"<{$goods.products.price|cur_odr}>"}'><span><span>对比</span></span></button>
+            </div>
+        </div>
+        <div class="goods-price">
+            <ul>
+
+                <li><label for="">销售价：</label><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
+                <{if $env.conf.b2c.site.show_mark_price == 'true'}>
+                <li><label for="">市场价：</label><del class="price"><{$goods.products.mktprice|cur_odr}></del></li>
+                <{if $env.conf.b2c.site.save_price == '1'}>
+                <li><label for="">节省：</label><span><{$goods.products.mktprice-$goods.products.price|cur_odr}></span></li>
+                <{elseif $env.conf.b2c.site.save_price == '2'}>
+                <li><label for="">优惠：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'2'}>%</span></li>
+                <{elseif $env.conf.b2c.site.save_price == '3'}>
+                <li><label for="">折扣：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'1'}><{t}>折<{/t}></span></li>
+                <{/if}>
+                <{/if}>
+            </ul>
+        </div>
+
+        <div class="m_goods-price">
+            <ul>
+
+                <li><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
+                <{if $env.conf.b2c.site.show_mark_price == 'true'}>
+                <{/if}>
+            </ul>
+        </div>
+
+
+        <div class="goods-info">
+            <!--预售商品的显示判断-->
+            <{if !isset($goods.prepare)}>
+            <{if $goods.products.promotion_type_name }>
+            <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=starbuy ctl=site_team act=index arg0=$goods.products.product_id arg1=$goods.products.promotion_type_id}>"><{$goods.name}></a>
+                <{else}>
+                <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>
+                    <{/if}>
+                    <{else}>
+                    <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>&nbsp;<span style="color:#fff;background:red;font-weight:bold;">预售</span>
+                        <{/if}>
+
+                        <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
+                        <{foreach from=$goods.tags item=tags}>
+                        <{if $tags.params.tag_showOnIndex == 'on'}>
+                        <span class="text-tag-<{$tags.params.pic_loc}>" style="background-color:<{$tags.tag_bgcolor|default:'transparent'}>;color:<{$tags.tag_fgcolor}>;opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><{$tags.tag_name}></span>
+                        <{/if}>
+                        <{/foreach}>
+                        <{/if}>
+                    </h3>
+                    <a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
+                    <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
+                    </a>
+                    <div class="goods-desc"><{$goods.brief}></div>
+                    <div class="goods-comment">
+                        <{if $point_status == 'on'}>
+                        <{if $goods.comments_count > 0}>
+                        <em class="stars stars-<{$goods.goods_point.avg_num*10}>">
+                            <span class="below"><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i></span><span class="above"><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i></span>
+                        </em>
+                        <{if $commentListListnum=='true'}>
+                        <a href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>#product_comment"><b><{$goods.comments_count}></b><{t}>条评论<{/t}></a>
+                        <{/if}>
+                        <{else}>
+                        <{if $commentListListnum=='true'}>
+                        <{t}>暂无评论<{/t}>
+                        <{/if}>
+                        <{/if}>
+                        <{/if}>
+                    </div>
+                    <div class="promotion-tags">
+                        <{if $goods.promotion_tags && $env.conf.b2c.gallery.display.promotion == 'true'}>
+                        <{foreach from=$goods.promotion_tags item=pTag}>
+                        <span class="tag"><{$pTag.tag_name}></span>
+                        <{/foreach}>
+                        <{/if}>
+
+                        <{if $goods.products.promotion_type_name }>
+                        <span class="tag"><{$goods.products.promotion_type_name}></span>
+                        <{/if}>
+                    </div>
+        </div>
+    </li>
+    <{/foreach}>
+</ul>
+
+<ul style="display: none">
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26884.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/98/6d/26/b959f6971c2d446f6073894ec65850d2f20e14fe.jpg?1536310634#h" alt="21世纪职业教育行业英语 冬奥会项目英语"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26623">
+            <input type="hidden" name="goods[product_id]" value="26884">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26623",img:"http://www.xinhuabest.com/public/images/98/6d/26/b959f6971c2d446f6073894ec65850d2f20e14fe.jpg?1536310634#h",name:"21世纪职业教育行业英语 冬奥会项目英语",price:"￥35.70"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥35.70</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥42.00</del></li>
+            <li><label for="">节省：</label><span>￥6.30</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥35.70</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26884.html">21世纪职业教育行业英语 冬奥会项目英语</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26623-26884-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26883.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/72/e2/b3/52400e637ce726fd9249fb27d37ca29452a0a094.jpg?1536303856#h" alt="新时代大学英语 视听说教程1"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26622">
+            <input type="hidden" name="goods[product_id]" value="26883">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26622",img:"http://www.xinhuabest.com/public/images/72/e2/b3/52400e637ce726fd9249fb27d37ca29452a0a094.jpg?1536303856#h",name:"新时代大学英语 视听说教程1",price:"￥48.45"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥48.45</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥57.00</del></li>
+            <li><label for="">节省：</label><span>￥8.55</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥48.45</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26883.html">新时代大学英语 视听说教程1</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26622-26883-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26882.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/f7/7f/0a/04ae55e1e06935b6baceb181afd32aa740421f9f.jpg?1536303661#h" alt="新时代大学英语 长篇阅读1"></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26621">
+            <input type="hidden" name="goods[product_id]" value="26882">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26621",img:"http://www.xinhuabest.com/public/images/f7/7f/0a/04ae55e1e06935b6baceb181afd32aa740421f9f.jpg?1536303661#h",name:"新时代大学英语 长篇阅读1",price:"￥41.65"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥41.65</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥49.00</del></li>
+            <li><label for="">节省：</label><span>￥7.35</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+
+            <li><ins class="price">￥41.65</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26882.html">新时代大学英语 长篇阅读1</a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26621-26882-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+<li class="goods-item clearfix">
+    <div class="goods-pic">
+        <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-26881.html"><img class="action-goods-img" data-src="http://www.xinhuabest.com/public/images/55/67/68/bde7736dd63105db7e5d48421a78fb31691cf693.jpg?1536303452#h" alt="大学体育与健康教程 "></a>
+    </div>
+    <div class="goods-action">
+        <!--预售商品的显示判断-->
+        <div class="goods-buy">
+            <!-- 加入购物车 -->
+                          <span class="p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
+                      </span>
+
+          <span class="m_p-quantity">
+            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
+            <input type="text" min="1" max="999999" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
+                      </span>
+
+            <input type="hidden" name="goods[goods_id]" value="26620">
+            <input type="hidden" name="goods[product_id]" value="26881">
+
+            <a class="btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+               target="_dialog_minicart"><span><span onclick="buy()">加入购物车</span></span>
+            </a>
+            <!--<a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+             target="_dialog_minicart">
+            </a>-->
+        </div>
+
+        <div class="goods-others">
+            <a href="/index.php/passport-login.html" class="btn btn-simple"><span><span>收藏</span></span></a>
+            <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"16",goods_id:"26620",img:"http://www.xinhuabest.com/public/images/55/67/68/bde7736dd63105db7e5d48421a78fb31691cf693.jpg?1536303452#h",name:"大学体育与健康教程 ",price:"￥30.60"}'><span><span>对比</span></span></button>
+        </div>
+    </div>
+    <div class="goods-price">
+        <ul>
+
+            <li><label for="">销售价：</label><ins class="price">￥30.60</ins></li>
+            <li><label for="">市场价：</label><del class="price">￥36.00</del></li>
+            <li><label for="">节省：</label><span>￥5.40</span></li>
+        </ul>
+    </div>
+
+    <div class="m_goods-price">
+        <ul>
+            <li><ins class="price">￥30.60</ins></li>
+        </ul>
+    </div>
+
+
+    <div class="goods-info">
+        <!--预售商品的显示判断-->
+        <h3 class="goods-name"><a  href="/index.php/<{$wap}>product-26881.html">大学体育与健康教程 </a>
+        </h3>
+        <a class="m_btn btn-major action-addtocart" href="/index.php/cart-add-goods-26620-26881-1.html"
+           target="_dialog_minicart">
+        </a>
+        <div class="goods-desc"></div>
+        <div class="goods-comment">
+        </div>
+        <div class="promotion-tags">
+        </div>
+    </div>
+</li>
+</ul>
 <!--20180803 edit by zhang 如果想改回来，直接删掉下边的<ul></ul>即可-->
 <ul>
 <li class="goods-item clearfix">
@@ -1751,213 +4878,12 @@
 
 
 </ul>
+
+
+
+<{/if}>
 </div>
-</div>
-</div>
-
-<!---新添加的六本指定图书end-->
-
-
-<div class="grade_main gallery-sortbar" id='gallery_sortbar' style="display:none">
-<div class="grade_mains  gallery-show" id='gallery_show'>
-    <div class="gallery-list">
-        <input type="hidden" class="action-pagedata" value="{total:<{$total}>, pagecurrent:<{$page|default:1}>, pagetotal:<{$pagetotal}>}">
-        <{if empty($goodsData)}>
-        <ul>
-            <li style="width:100%; padding-bottom: 1%!important;">
-                <h1 style="font-size:18px; color: #666;text-align:center;margin:0 auto;display: none;" >非常抱歉，没有找到相关教辅</h1> <!---->
-            </li>
-        </ul>
-        <{else}>
-        <ul>
-            <{foreach from=$goodsData key=key item=goods}>
-            <li class="goods-item clearfix">
-                <div class="goods-pic">
-                    <{if $goods.products.promotion_type_name }>
-                    <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
-                    <{else}>
-                    <a  target='_blank'  href="http://www.xinhuabest.com/index.php/<{$wap}>product-<{$goods.products.product_id}>.html"><img class="action-goods-img" data-src="<{$goods.image_default_id|default:$imageDefault.S.default_image|storager:'s'}>" alt="<{$goods.name|strip_tags}>"></a>
-                    <{/if}>
-                    <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
-                    <{foreach from=$goods.tags item=tags}>
-                    <{if $tags.params.tag_showOnIndex == 'on'}>
-                    <{if $tags.params.tag_image}>
-                    <span class="img-tag-<{$tags.params.pic_loc}>" style="opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><img src="<{$tags.params.tag_image|storager}>"></span>
-                    <{else}>
-                    <{/if}>
-                    <{/if}>
-                    <{/foreach}>
-                    <{/if}>
-                </div>
-                <div class="goods-action">
-                    <!--预售商品的显示判断-->
-                    <{if !isset($goods.prepare)}>
-                    <div class="goods-buy">
-                        <{if $goods.products.store > 0}>
-                        <!-- 加入购物车 -->
-                        <{if $env.conf.b2c.gallery.display.buynum == 'true'}>
-          <span class="p-quantity">
-            <a href="javascript:void(0);" class="btn-decrease" id="jian1">-</a>
-            <input type="text" min="1" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
-            <a href="javascript:void(0);" class="btn-increase" id="jia1">+</a>
-            <{if $env.conf.b2c.gallery.display.store_status == 'true'}>
-            <{if $goods.products.store <= $env.conf.b2c.gallery.store_status.num}>
-            <span class="store-warn"><{t}>库存紧张<{/t}></span>
-            <{/if}>
-            <{/if}>
-          </span>
-
-          <span class="m_p-quantity">
-            <a href="javascript:void(0);" class="btn-decrease" id="jian2"></a>
-            <input type="text" min="1" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
-            <a href="javascript:void(0);" class="btn-increase" id="jia2"></a>
-            <{if $env.conf.b2c.gallery.display.store_status == 'true'}>
-            <{if $goods.products.store <= $env.conf.b2c.gallery.store_status.num}>
-            <span class="store-warn"><{t}>库存紧张<{/t}></span>
-            <{/if}>
-            <{/if}>
-          </span>
-
-                        <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
-                        <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
-                        <{/if}>
-                        <{if $env.conf.b2c.site.buy.target == '2'}>
-                        <{assign var='buytarget' value='_blank_cart'}>
-                        <{elseif $env.conf.b2c.site.buy.target == '3'}>
-                        <{assign var='buytarget' value='_dialog_minicart'}>
-                        <{/if}>
-
-                        <a class="btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
-                        <{if $buytarget}> target="<{$buytarget}>"<{/if}>><span><span onclick="buy()">加入购物车</span></span>
-                        </a>
-                        <!--<a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
-                        <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
-                        </a>-->
-                        <{elseif $goods.spec_desc && $goods.store}>
-                        <a class="btn btn-caution" href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>查看详情</span></span></a>
-                        <{else}>
-                        <!-- 到货通知 -->
-                        <a href="javascript:void(0);" class="btn btn-caution action-notify" rel="<{$goods.goods_id}>::<{$goods.products.product_id}>"><span><span>到货通知</span></span></a>
-                        <{/if}>
-                    </div>
-                    <{else}>
-                    <!--预售商品-->
-                    <div class="goods-buy">
-
-                        <!-- 加入购物车 -->
-          <span class="p-quantity">
-            <input type="text" min="1" readonly="true" max="<{$goods.products.store|number}>" size="2" name="goods[num]" class="action-quantity-input" value="1">
-
-          </span>
-                        <input type="hidden" name="goods[goods_id]" value="<{$goods.goods_id}>">
-                        <input type="hidden" name="goods[product_id]" value="<{$goods.products.product_id}>">
-
-
-                        <a class="btn btn-major"  href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><span><span>立即预定</span></span></a>
-
-                    </div>
-                    <{/if}>
-
-                    <div class="goods-others">
-                        <{if $login=='nologin'}>
-                        <a href="<{link app=b2c ctl=site_passport act=login}>" class="btn btn-simple"><span><span>收藏</span></span></a>
-                        <{else}>
-                        <{if !$goods.is_fav}>
-                        <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>"><span><span>收藏</span></span></button>
-                        <button type="button" class="btn btn-plane" rev="_favbtn_" style="display:none;"><span><span>已收藏</span></span></button>
-                        <{else}>
-                        <button type="button" class="btn btn-simple" rel="_favbtn_" data-gid="<{$goods.goods_id}>" style="display:none;"><span><span>收藏</span></span></button>
-                        <button type="button" class="btn btn-plane" rev="_favbtn_"><span><span>已收藏</span></span></button>
-                        <{/if}>
-                        <{/if}>
-                        <button type="button" class="btn btn-simple action-compare" data-compare='{type_id:"<{$goods.type_id}>",goods_id:"<{$goods.goods_id}>",img:"<{$goods.image_default_id|storager:'s'}>",name:"<{$goods.name|strip_tags}>",price:"<{$goods.products.price|cur_odr}>"}'><span><span>对比</span></span></button>
-                    </div>
-                </div>
-                <div class="goods-price">
-                    <ul>
-
-                        <li><label for="">销售价：</label><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
-                        <{if $env.conf.b2c.site.show_mark_price == 'true'}>
-                        <li><label for="">市场价：</label><del class="price"><{$goods.products.mktprice|cur_odr}></del></li>
-                        <{if $env.conf.b2c.site.save_price == '1'}>
-                        <li><label for="">节省：</label><span><{$goods.products.mktprice-$goods.products.price|cur_odr}></span></li>
-                        <{elseif $env.conf.b2c.site.save_price == '2'}>
-                        <li><label for="">优惠：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'2'}>%</span></li>
-                        <{elseif $env.conf.b2c.site.save_price == '3'}>
-                        <li><label for="">折扣：</label><span><{$goods.products.price/$goods.products.mktprice*100|number:'1'}><{t}>折<{/t}></span></li>
-                        <{/if}>
-                        <{/if}>
-                    </ul>
-                </div>
-
-                <div class="m_goods-price">
-                    <ul>
-
-                        <li><ins class="price"><{$goods.products.price|cur_odr}></ins></li>
-                        <{if $env.conf.b2c.site.show_mark_price == 'true'}>
-                        <{/if}>
-                    </ul>
-                </div>
-
-
-                <div class="goods-info">
-                    <!--预售商品的显示判断-->
-                    <{if !isset($goods.prepare)}>
-                    <{if $goods.products.promotion_type_name }>
-                    <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=starbuy ctl=site_team act=index arg0=$goods.products.product_id arg1=$goods.products.promotion_type_id}>"><{$goods.name}></a>
-                        <{else}>
-                        <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>
-                            <{/if}>
-                            <{else}>
-                            <h3 class="goods-name"><a <{if $opentype eq 'new_page'}>target="_blank"<{/if}> href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>"><{$goods.name}></a>&nbsp;<span style="color:#fff;background:red;font-weight:bold;">预售</span>
-                                <{/if}>
-
-                                <{if $goods.tags && $gallery_display_tag_goods == 'true'}>
-                                <{foreach from=$goods.tags item=tags}>
-                                <{if $tags.params.tag_showOnIndex == 'on'}>
-                                <span class="text-tag-<{$tags.params.pic_loc}>" style="background-color:<{$tags.tag_bgcolor|default:'transparent'}>;color:<{$tags.tag_fgcolor}>;opacity:<{$tags.params.tag_opacity / 100}>;filter:alpha(opacity=<{$tags.params.tag_opacity}>)"><{$tags.tag_name}></span>
-                                <{/if}>
-                                <{/foreach}>
-                                <{/if}>
-                            </h3>
-                            <a class="m_btn btn-major action-addtocart" href="<{link app=b2c ctl=site_cart act=add arg0=goods arg1=$goods.goods_id arg2=$goods.products.product_id arg3=1}>"
-                            <{if $buytarget}> target="<{$buytarget}>"<{/if}>>
-                            </a>
-                            <div class="goods-desc"><{$goods.brief}></div>
-                            <div class="goods-comment">
-                                <{if $point_status == 'on'}>
-                                <{if $goods.comments_count > 0}>
-                                <em class="stars stars-<{$goods.goods_point.avg_num*10}>">
-                                    <span class="below"><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i><i class="icon star">&#x2f;</i></span><span class="above"><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i><i class="icon star">&#x2e;</i></span>
-                                </em>
-                                <{if $commentListListnum=='true'}>
-                                <a href="<{link app=b2c ctl=site_product arg0=$goods.products.product_id}>#product_comment"><b><{$goods.comments_count}></b><{t}>条评论<{/t}></a>
-                                <{/if}>
-                                <{else}>
-                                <{if $commentListListnum=='true'}>
-                                <{t}>暂无评论<{/t}>
-                                <{/if}>
-                                <{/if}>
-                                <{/if}>
-                            </div>
-                            <div class="promotion-tags">
-                                <{if $goods.promotion_tags && $env.conf.b2c.gallery.display.promotion == 'true'}>
-                                <{foreach from=$goods.promotion_tags item=pTag}>
-                                <span class="tag"><{$pTag.tag_name}></span>
-                                <{/foreach}>
-                                <{/if}>
-
-                                <{if $goods.products.promotion_type_name }>
-                                <span class="tag"><{$goods.products.promotion_type_name}></span>
-                                <{/if}>
-                            </div>
-                </div>
-            </li>
-            <{/foreach}>
-        </ul>
-        <{/if}>
-    </div>
-    <{pagers data=$pager}>
+<{pagers data=$pager}>
 
 </div>
 </div>
@@ -2348,27 +5274,36 @@
 
 <script type="text/javascript">
     jQuery(function(){
-        var s_province=jQuery.cookie('s_province');
-//        if(!s_province){
-//            s_province = '石家庄市';
-//        }
-        var s_city=jQuery.cookie('s_city');
-//                if(!s_city){
-//                    s_city = '桥西区';
-//        }
-
-        var s_county=jQuery.cookie('s_county');
-//                if(!s_county){
-//                    s_county = '草场街小学';
-//        }
-
-        var s_grade=jQuery.cookie('s_grade');
-//                if(!s_grade){
-//                    s_grade = '九年级';
-//        }
-
+        var s_province=jQuery.cookie('s_province');//alert(s_province);
+        /*
+         if(typeof(s_province) == "undefined"){
+         //alert("undefined");
+         s_province = '张家口市';
+         }
+         */
+        var s_city=jQuery.cookie('s_city');//alert(s_city);
+        /*
+         if(typeof(s_city) == "undefined"){
+         s_city = '桥西区';//alert(s_city);
+         }
+         */
+        var s_county=jQuery.cookie('s_county');//alert(s_city);
+        /*
+         if(typeof(s_county) == "undefined"){
+         s_county = '张家口学院';
+         }
+         */
+        var s_grade=jQuery.cookie('s_grade');//alert(s_grade);
+        /*
+         if(typeof(s_grade) == "undefined"){
+         s_grade = '大一';
+         }
+         */
         var s_class=jQuery.cookie('s_class');
         //位置
+
+
+
         var mywz='';
         if(s_province){
             mywz+=s_province;
@@ -2382,9 +5317,10 @@
         if(s_grade){
             mywz+=">"+s_grade;
         }
-        if(s_class){
-            mywz+=">"+s_class;
-        }
+        //if(s_class){
+        //    mywz+=">"+s_class;
+        // }
+        //return false;
         jQuery("#dqwz").html(mywz);
         jQuery("#dqwz2").html(mywz);
         jQuery("#dqwz3").html(mywz);
@@ -2407,7 +5343,7 @@
             jQuery("#s_grade").val(s_grade);
 
         }
-        if(s_class){
+        if(s_class){ //更改了上下册
             jQuery("#m_s_class").val(s_class);
             jQuery("#s_class").val(s_class);
         }
@@ -3254,7 +6190,7 @@ function inputCheck(input, options) {
          </div>
      </div>-->
         <div class="title" style="padding-top:80px"><img style="width:50%; display:block; margin:0 auto" src="<{$env.app.res_url}>/css/new/images/title.png" /></div>
-        <div class="position_else">
+        <div class="position_else" style="display: none">
             <div class="position_name" style="font-size:30px">已选：</div>
             <div class="posi_location" id="dqwz3" style="font-size:30px"></div>
             <!-- <div class="ghqy_new">更换区域</div>-->
