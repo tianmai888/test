@@ -1,3 +1,4 @@
 ali-key
 wechat-config
 修改别名
+配置公钥
